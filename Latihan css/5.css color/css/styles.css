@@ -5,8 +5,12 @@ body {
 /* foreground color */
 
 /* color name */
+.h1_malik {
+  color: black;
+}
+
 h1 {
-  color: darkcyan;
+  color: rgb(241, 202, 202);
 }
 
 /* hex code */
@@ -21,11 +25,7 @@ P {
 
 /* background color */
 body {
-  background-color: #efefef;
-}
-
-h1 {
-  background-color: cornflowerblue;
+  background-color: rgb(102, 19, 51);
 }
 
 h2 {

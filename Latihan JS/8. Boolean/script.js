@@ -12,7 +12,7 @@ console.log(data_bool_4);
 let data_bool_5 = 3 > 10;
 console.log(data_bool_5);
 
-let data_bool_6 = "ucup" == "otong";
+let data_bool_6 = "ucup" == "malik";
 console.log(data_bool_6);
 
 let data_bool_7 = "ucup" == "ucup";

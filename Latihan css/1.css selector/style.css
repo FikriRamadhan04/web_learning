@@ -1,42 +1,28 @@
-/* universal selector */
-
 * {
-    font-family: Arial, Helvetica, sans-serif ;
+  font-family: "Trebuchet MS";
 }
 
-/* type selctor */
 h1 {
-    color: brown;
+  color: brown;
 }
 
-/* class selector */
-li.pagi{
-    color: darkgoldenrod;
+p > b {
+  color: brown;
 }
 
-li.siang {
-    color: chartreuse;
+p > i {
+  color: brown;
 }
 
-li.malam {
-    color: blue;
-}
-
-/* child selector */
-p>b {
-    color: darkcyan;
-}
-
-li>b {
-    color: darkcyan;
-}
-
-/* desendant selector */
-p b {
-    color: chocolate;
-}
-
-/* satu target seector */
-p .target {
-    color: darkslateblue;
+h2 {
+  color: rgb(255, 255, 255);
+  background-color: brown;
+  height: 60px;
+  width: 100px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 20px;
+  border: 3px solid yellow;
 }
