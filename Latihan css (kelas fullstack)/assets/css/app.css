@@ -2,3 +2,13 @@ h1 {
   color: chartreuse;
   font-size: xx-large;
 }
+
+button {
+  color: darkblue;
+  background-color: tan;
+}
+
+p {
+  color: rgb(241, 203, 203);
+  background-color: brown;
+}
