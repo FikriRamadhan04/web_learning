@@ -1,0 +1,26 @@
+/* selector universal */
+* {
+  background-color: cornflowerblue;
+}
+
+/* grouping */
+h1,
+h2,
+h3 {
+  color: white;
+  background-color: rgb(10, 104, 211);
+}
+
+span {
+  color: white;
+}
+
+/* selectir ID */
+#list2 {
+  color: chartreuse;
+}
+
+/* selectir Class*/
+.mark {
+  background-color: darkviolet;
+}
