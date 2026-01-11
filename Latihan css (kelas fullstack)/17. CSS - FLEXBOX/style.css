@@ -9,10 +9,15 @@ h1 {
   margin: 0 auto;
   border: 5px solid brown;
   display: flex;
-  /* flex-direction: row;
-  flex-direction: row-reverse;
-  flex-direction: column; */
-  flex-direction: column-reverse;
+  flex-direction: row;
+  /* flex-direction: row-reverse;
+  flex-direction: column; 
+  flex-direction: column-reverse; */
+  /* justify-content: flex-start;
+  justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  justify-content: space-evenly;
 }
 
 #container div {
