@@ -9,15 +9,29 @@ h1 {
   margin: 0 auto;
   border: 5px solid brown;
   display: flex;
-  flex-direction: row;
-  /* flex-direction: row-reverse;
-  flex-direction: column; 
-  flex-direction: column-reverse; */
-  /* justify-content: flex-start;
-  justify-content: flex-end; */
-  /* justify-content: center; */
+
+  /* flex-direction */
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  flex-direction: column;
+  /* flex-direction: column-revers; */
+
+  /* justify-content */
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  justify-content: center;
   /* justify-content: space-around; */
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+
+  /* flex-wrap */
+  flex-wrap: wrap;
+  /* flex-wrap: wrap-reverse; */
+
+  /* alignt-item */
+  align-items: flex-start;
+  /* align-items: center; */
+  /* align-items: baseline; */
+  /* align-items: flex-end; */
 }
 
 #container div {
