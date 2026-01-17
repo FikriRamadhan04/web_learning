@@ -1,0 +1,53 @@
+body {
+  font-family: Calibri;
+}
+
+h1 {
+  font-family: 6em;
+  text-align: center;
+  color: brown;
+}
+
+nav {
+  font-size: 1em;
+}
+
+ul,
+li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 500px) {
+  h1 {
+    color: blue;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    color: chartreuse;
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 900px) {
+  h1 {
+    color: rgb(42, 165, 63);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    color: darkmagenta;
+    font-size: 50px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    background-color: darkorange;
+  }
+}
