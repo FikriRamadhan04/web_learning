@@ -128,10 +128,6 @@ table {
   border-spacing: 0;
 }
 
-img {
-  width: 50%;
-}
-
 html {
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
@@ -152,4 +148,51 @@ body {
   padding: 15px 25px;
   width: 100%;
   max-width: 960px;
+  flex-direction: column;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pricing-plan {
+  border-bottom: 1px solid black;
+}
+
+.pricing-plan :last-child {
+  border-bottom: none;
+}
+
+.pricing-img {
+  margin-bottom: 25px;
+  max-width: 150px;
+}
+
+.pricing-header {
+  color: grey;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.pricing-features {
+  margin: 50px 0 25px;
+  color: cornflowerblue;
+}
+
+.pricing-features-item {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 15px 0;
+  border-top: 1px solid black;
+}
+
+.pricing-features-item:last-child {
+  border-bottom: 1px solid black;
+}
+
+.pricing-price {
+  color: blue;
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
 }
