@@ -1,234 +1,121 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-html {
-  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  background-color: #f0f4f8;
+  background-color: #3498db;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 .panel {
-  background-color: #ffffff;
-  border-radius: 12px;
+  background-color: #fff;
+  border-radius: 15px;
   padding: 30px;
-  width: 90%;
-  max-width: 960px;
+  width: 95%;
+  max-width: 1100px;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  text-transform: uppercase;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  flex-direction: row;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .pricing-plan {
-  border-bottom: 1px solid #e1e8ed;
-  padding: 20px 0;
-}
-
-.pricing-plan:last-child {
-  border-bottom: none;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #f0f4f8;
+  border-radius: 10px;
 }
 
 .pricing-img {
-  margin-bottom: 25px;
-  max-width: 120px;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .pricing-header {
-  color: #475a6b;
+  font-size: 14px;
+  color: #888;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .pricing-features {
-  margin: 40px 0 25px;
-  color: #3498db;
+  width: 100%;
   list-style: none;
-  padding: 0;
+  flex-grow: 1; /* Supaya harga & tombol sejajar di bawah */
+  margin-bottom: 20px;
 }
 
 .pricing-features-item {
+  border-top: 1px solid #f0f4f8;
+  padding: 12px 0;
+  color: #3498db;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 1px;
-  font-size: 13px;
-  line-height: 1.6;
-  padding: 15px 0;
-  border-top: 1px solid #e1e8ed;
+  text-transform: uppercase;
 }
 
 .pricing-features-item:last-child {
-  border-bottom: 1px solid #e1e8ed;
+  border-bottom: 1px solid #f0f4f8;
 }
 
 .pricing-price {
   color: #2c3e50;
-  display: block;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 800;
-  margin: 20px 0;
+  margin: 15px 0;
+  display: block;
 }
 
+/* TOMBOL KECIL */
 .pricing-button {
-  border: 2px solid #3498db;
-  border-radius: 50px;
+  border: 1px solid #3498db;
   color: #3498db;
-  display: inline-block;
-  padding: 12px 35px;
   text-decoration: none;
-  margin: 20px 0;
-  transition: all 0.3s ease;
+  padding: 8px 25px;
+  font-size: 11px;
   font-weight: 700;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 
-.pricing-button:hover,
-.pricing-button:focus {
+.pricing-button:hover {
   background-color: #3498db;
-  color: #ffffff;
+  color: #fff;
 }
 
 .pricing-button.is-featured {
   background-color: #3498db;
-  color: #ffffff;
+  color: #fff;
 }
 
-.pricing-button.is-featured:hover,
-.pricing-button.is-featured:focus {
-  background-color: #2980b9;
-  border-color: #2980b9;
+@media (max-width: 768px) {
+  .panel {
+    flex-direction: column;
+  }
+
+  .pricing-plan {
+    border-bottom: none;
+    border-right: 1px soid white;
+    padding: 25px 50px;
+  }
+
+  .pricing-plan {
+    border-right: none;
+  }
 }
