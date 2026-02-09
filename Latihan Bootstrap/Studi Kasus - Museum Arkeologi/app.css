@@ -6,14 +6,16 @@ body {
 #navbar {
   font-size: 1.5rem;
   font-weight: 100;
+  background-color: #ffffff;
+  position: fixed;
 }
 
 #navbar .nav-link {
-  color: white;
+  color: grey;
 }
 
 #navbar .nav-link:hover {
-  color: #354259;
+  color: red;
 }
 #navbar .navbar-brand {
   color: #354259;
@@ -38,10 +40,6 @@ body {
   line-height: 2;
 }
 
-.content {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
 @media (max-width: 1200px) {
   #title-head h1 {
     font-weight: 100;
