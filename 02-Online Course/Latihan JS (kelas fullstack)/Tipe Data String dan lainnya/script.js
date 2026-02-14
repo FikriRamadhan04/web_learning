@@ -49,3 +49,10 @@ console.log("Leave mE Alone".toLowerCase());
 
 console.log(" hello world".trim());
 console.log(" hello world".trim().toUpperCase());
+
+console.log(greeting.indexOf("world"));
+console.log(greeting.slice(0, 5));
+console.log(greeting.slice(5));
+console.log(greeting.slice(6, 11));
+
+console.log(greeting.replace("world", "there"));
