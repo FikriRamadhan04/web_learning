@@ -12,6 +12,8 @@ console.log(20);
 console.log("saya mengucapkan 'selamat");
 console.log('saya mengucapkan "selamat"');
 
+// Method
+
 // 1. Mengenal Index dalam string dan panjang karakter
 // nilai index dalam string dimulai dari 0 ( jadi misal: hakim: h=0, a=1,k=2 i=4, m=4)
 let nama = "steven";
@@ -35,4 +37,15 @@ let namaBelakang = "satorou";
 console.log((namaLengkap = namaDepan + " " + namaBelakang));
 
 // number jika di tambahkan ke string akan menjadi string
-console.log(namaLengkap + 1);
+console.log((namaLengkap += 1));
+
+// 2. Method
+let greeting = "hello world";
+
+console.log(greeting.toUpperCase());
+console.log("hello world".toLowerCase());
+
+console.log("Leave mE Alone".toLowerCase());
+
+console.log(" hello world".trim());
+console.log(" hello world".trim().toUpperCase());
