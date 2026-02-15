@@ -60,6 +60,33 @@ let name = "Steven";
 let age = "30";
 let status = "single";
 
+// cara manual
 console.log(
-  `${greeting.replace("world", "there")}! Nama saya ${name} umur saya ${age}  status saya ${status}`,
+  greeting.replace("world", "there") +
+    " " +
+    "Nama saya " +
+    name +
+    " " +
+    "Umur saya " +
+    age +
+    " " +
+    "Status saya " +
+    status,
 );
+
+// menggunakan template literals
+console.log(
+  `${greeting.replace("world", "there")} Nama saya ${name} Umur saya ${age} Status saya ${status}`,
+);
+
+// 3. Mengenal Null dan Undefined
+console.log(null);
+console.log(undefined);
+
+let wadah;
+console.log(wadah);
+console.log(typeof wadah);
+
+wadah = null;
+console.log(wadah);
+console.log(typeof wadah);
