@@ -35,7 +35,6 @@ let namaDepan = "gojo";
 let namaBelakang = "satorou";
 
 console.log((namaLengkap = namaDepan + " " + namaBelakang));
-
 // number jika di tambahkan ke string akan menjadi string
 console.log((namaLengkap += 1));
 
@@ -56,3 +55,11 @@ console.log(greeting.slice(5));
 console.log(greeting.slice(6, 11));
 
 console.log(greeting.replace("world", "there"));
+
+let name = "Steven";
+let age = "30";
+let status = "single";
+
+console.log(
+  `${greeting.replace("world", "there")}! Nama saya ${name} umur saya ${age}  status saya ${status}`,
+);
