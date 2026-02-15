@@ -90,3 +90,11 @@ console.log(typeof wadah);
 wadah = null;
 console.log(wadah);
 console.log(typeof wadah);
+
+// 4. Mengenal Object dan angka Acak
+console.log(Math.PI);
+console.log(Math.E);
+console.log(Math.abs(-123));
+console.log(Math.floor(5.9));
+console.log(Math.round(5.9));
+console.log(Math);
