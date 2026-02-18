@@ -19,6 +19,7 @@ console.log("b" == "c");
 console.log(7 == "7");
 console.log(0 == "");
 console.log(true == false);
+
 console.log(0 == false);
 console.log(null == undefined);
 
@@ -31,7 +32,17 @@ console.log(0 === false);
 console.log(10 != "10");
 console.log(10 !== "10");
 
-// Console Alert & Prompt
-console.error("This is error message");
-alert("This is error message");
-prompt("input your number!");
+// 3. Console Alert & Prompt
+// console.error("This is error message");
+// alert("This is error message");
+// prompt("input your number!");
+
+// 4.if statement
+// console.log("Sebelum pembanding");
+// if (1 + 1 == 2) {
+//   console.log("Di dalam pembanding");
+// }
+
+// console.log("Setelah pembanding");
+
+let angka = math.random();
