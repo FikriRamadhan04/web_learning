@@ -55,3 +55,26 @@ if (angka >= 0.5) {
 if (angka <= 0.5) {
   console.log("angka lebih kecil dari 0.5");
 }
+
+// 5.Else if Statement
+// const iniHari = "Senin";
+
+// if (iniHari === "Senin") {
+//   console.log("Selamat bekerja kawan");
+// } else if (iniHari === "Sabtu") {
+//   console.log("Semoga jangan cepat berlalu");
+// }
+
+const nilai = 80;
+
+if (nilai < 50) {
+  console.log("E");
+} else if (nilai < 60) {
+  console.log("D");
+} else if (nilai < 70) {
+  console.log("C");
+} else if (nilai < 80) {
+  console.log("B");
+} else if (nilai < 100) {
+  console.log("A");
+}
