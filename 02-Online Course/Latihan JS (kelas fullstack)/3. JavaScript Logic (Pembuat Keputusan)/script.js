@@ -45,16 +45,16 @@ console.log(10 !== "10");
 
 // console.log("Setelah pembanding");
 
-let angka = Math.random();
-console.log(angka);
+// let angka = Math.random();
+// console.log(angka);
 
-if (angka >= 0.5) {
-  console.log("angka lebih besar dari 0.5");
-}
+// if (angka >= 0.5) {
+//   console.log("angka lebih besar dari 0.5");
+// }
 
-if (angka <= 0.5) {
-  console.log("angka lebih kecil dari 0.5");
-}
+// if (angka <= 0.5) {
+//   console.log("angka lebih kecil dari 0.5");
+// }
 
 // 5.Else if Statement
 // const iniHari = "Senin";
@@ -93,15 +93,35 @@ if (angka <= 0.5) {
 //   console.log("A");
 // }
 
-const password = prompt("buat password");
+// 5. Nested if (if di dalam if)
+// const password1 = prompt("buat password");
 
-// Password harus sepanjang 6 karakter
-if (password.length >= 6) {
-  if (password.indexOf(" ") === -1) {
-    console.log("password valid");
-  } else {
-    console.log("password tidak boleh ada spasi");
+// Password harus sepanjang 6 karakter & tidak boleh ada spasi
+// if (password.length >= 6) {
+//   if (password1.indexOf(" ") === -1) {
+//     console.log("password valid");
+//   } else {
+//     console.log("password tidak boleh ada spasi");
+//   }
+// } else {
+//   console.log("Password minimal 6 karakter");
+// }
+
+// versi guard clauses
+function password2() {
+  const password2 = prompt("buat password");
+
+  if (password2.length < 6) {
+    console.log("Eror:Minimal 6 krakter");
+    return; //berhenti disini
   }
-} else {
-  console.log("Password minimal 6 karakter");
+
+  if (password2.includes(" ")) {
+    console.log("Eror: Tidak boleh ada spasi");
+    return; //berhenti disini
+  }
+
+  // Jika lolos semua cek di atas, baru eksekusi kode utama
+  console.log("Sukses: Password kamu valid!");
 }
+password2();
