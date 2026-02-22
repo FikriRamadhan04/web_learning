@@ -58,15 +58,26 @@ if (angka <= 0.5) {
 
 // 5.Else if Statement
 // const iniHari = "Senin";
-const iniHari = prompt("Isikan hari!").toLowerCase();
+// const iniHari = prompt("Isikan hari!").toLowerCase();
 
-if (iniHari === "senin") {
-  console.log("Selamat bekerja kawan");
-} else if (iniHari === "sabtu") {
-  console.log("Semoga jangan cepat berlalu");
-} else {
-  console.log("Yah biasa saja");
-}
+// if (iniHari === "senin") {
+//   console.log("Selamat bekerja kawan");
+// } else if (iniHari === "selasa") {
+//   console.log("Yah biasa saja");
+// } else if (iniHari === "rabu") {
+//   console.log("Yah biasa saja");
+// } else if (iniHari === "kamis") {
+//   console.log("Yah biasa saja");
+// } else if (iniHari === "jum'at") {
+//   console.log("Yah biasa saja");
+// } else if (iniHari === "sabtu") {
+//   s;
+//   console.log("jangan cepat berlalu");
+// } else if (iniHari === "minggu") {
+//   console.log("jangan cepat berlalu");
+// } else {
+//   console.log("jawaban salah");
+// }
 
 // const nilai = 80;
 
@@ -81,3 +92,16 @@ if (iniHari === "senin") {
 // } else if (nilai < 100) {
 //   console.log("A");
 // }
+
+const password = prompt("buat password");
+
+// Password harus sepanjang 6 karakter
+if (password.length >= 6) {
+  if (password.indexOf(" ") === -1) {
+    console.log("password valid");
+  } else {
+    console.log("password tidak boleh ada spasi");
+  }
+} else {
+  console.log("Password minimal 6 karakter");
+}
