@@ -108,20 +108,29 @@ console.log(10 !== "10");
 // }
 
 // versi guard clauses
-function password2() {
-  const password2 = prompt("buat password");
+// function password2() {
+//   const password2 = prompt("buat password");
 
-  if (password2.length < 6) {
-    console.log("Eror:Minimal 6 krakter");
-    return; //berhenti disini
-  }
+//   if (password2.length < 6) {
+//     console.log("Eror:Minimal 6 krakter");
+//     return; //berhenti disini
+//   }
 
-  if (password2.includes(" ")) {
-    console.log("Eror: Tidak boleh ada spasi");
-    return; //berhenti disini
-  }
+//   if (password2.includes(" ")) {
+//     console.log("Eror: Tidak boleh ada spasi");
+//     return; //berhenti disini
+//   }
 
-  // Jika lolos semua cek di atas, baru eksekusi kode utama
-  console.log("Sukses: Password kamu valid!");
+//   // Jika lolos semua cek di atas, baru eksekusi kode utama
+//   console.log("Sukses: Password kamu valid!");
+// }
+// password2();
+
+// 6.Operator Logic And
+const password3 = prompt("buat password");
+
+if (password3.length >= 6 && password3.indexOf(" ") === -1) {
+  console.log("Password Valid");
+} else {
+  console.log("Password tidak valid");
 }
-password2();
