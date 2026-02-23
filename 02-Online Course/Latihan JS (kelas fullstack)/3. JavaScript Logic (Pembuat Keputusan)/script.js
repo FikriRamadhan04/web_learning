@@ -135,12 +135,21 @@ console.log(10 !== "10");
 //   console.log("Password tidak valid");
 // }
 
-// Opeartor logic not
+// Opeartor logic or
 const role = prompt("Masukan Role Akun");
 
-if (role !== "Admin")
-  if (role !== "Member") {
-    console.log("Akses Ditolak");
-  } else {
-    console.log("Akses Diterima");
-  }
+if (role == "Admin" || role == "spv") {
+  console.log("Boleh Mengakses");
+} else {
+  console.log("Akses Ditolak");
+}
+
+// Opeartor logic not
+// const role = prompt("Masukan Role Akun");
+
+// if (role !== "Admin")
+//   if (role !== "Member") {
+//     console.log("Akses Ditolak");
+//   } else {
+//     console.log("Akses Diterima");
+//   }
