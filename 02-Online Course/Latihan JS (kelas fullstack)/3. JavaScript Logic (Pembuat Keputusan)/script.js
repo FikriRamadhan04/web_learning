@@ -97,7 +97,7 @@ console.log(10 !== "10");
 // const password1 = prompt("buat password");
 
 // Password harus sepanjang 6 karakter & tidak boleh ada spasi
-// if (password.length >= 6) {
+// if (password  >= 6) {
 //   if (password1.indexOf(" ") === -1) {
 //     console.log("password valid");
 //   } else {
@@ -127,10 +127,20 @@ console.log(10 !== "10");
 // password2();
 
 // 6.Operator Logic And
-const password3 = prompt("buat password");
+// const password3 = prompt("buat password");
 
-if (password3.length >= 6 && password3.indexOf(" ") === -1) {
-  console.log("Password Valid");
-} else {
-  console.log("Password tidak valid");
-}
+// if (password3.length >= 6 && password3.indexOf(" ") === -1) {
+//   console.log("Password Valid");
+// } else {
+//   console.log("Password tidak valid");
+// }
+
+// Opeartor logic not
+const role = prompt("Masukan Role Akun");
+
+if (role !== "Admin")
+  if (role !== "Member") {
+    console.log("Akses Ditolak");
+  } else {
+    console.log("Akses Diterima");
+  }
