@@ -136,13 +136,13 @@ console.log(10 !== "10");
 // }
 
 // Opeartor logic or
-const role = prompt("Masukan Role Akun");
+// const role = prompt("Masukan Role Akun");
 
-if (role == "Admin" || role == "spv") {
-  console.log("Boleh Mengakses");
-} else {
-  console.log("Akses Ditolak");
-}
+// if (role == "Admin" || role == "spv") {
+//   console.log("Boleh Mengakses");
+// } else {
+//   console.log("Akses Ditolak");
+// }
 
 // Opeartor logic not
 // const role = prompt("Masukan Role Akun");
@@ -153,3 +153,45 @@ if (role == "Admin" || role == "spv") {
 //   } else {
 //     console.log("Akses Diterima");
 //   }
+
+// switch sebagai alternatif if statement
+// const balonku = prompt("masukan warna balon");
+
+// switch (balonku) {
+//   case "merah":
+//     console.log("warna merah");
+//     break;
+//   case "hijau":
+//     console.log("dooor");
+//     break;
+//   default:
+//     console.log("bukan balonku");
+// }
+
+const day = prompt("masukan hari");
+
+switch (day) {
+  case "1":
+    console.log("senin");
+    break;
+  case "2":
+    console.log("selasa");
+    break;
+  case "3":
+    console.log("rabu");
+    break;
+  case "4":
+    console.log("kamis");
+    break;
+  case "5":
+    console.log("jum'at");
+    break;
+  case "6":
+    console.log("sabtu");
+    break;
+  case "7":
+    console.log("Minggu");
+    break;
+  default:
+    console.log("tidak ada");
+}
