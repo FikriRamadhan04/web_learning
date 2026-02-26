@@ -12,16 +12,35 @@
 // let campuran = ["laptop", 1, true, null];
 
 // 2. Mendapatkan Nilai Dengan Index Dan Mengubah Isinya
-let warna = ["hijau", "kuning", "kelab", "bu"];
+// let warna = ["hijau", "kuning", "kelab", "bu"];
 
-warna[2] = "kelabu";
-warna[3] = "merah muda";
-warna[0] = 1;
-warna[9] = "biru";
-warna[4] = "hijau";
+// warna[2] = "kelabu";
+// warna[3] = "merah muda";
+// warna[0] = 1;
+// warna[9] = "biru";
+// warna[4] = "hijau";
 
-console.log(warna[2]);
-console.log(warna[3]);
-console.log(warna[0]);
-console.log(warna[9]);
-console.log(warna);
+// console.log(warna[2]);
+// console.log(warna[3]);
+// console.log(warna[0]);
+// console.log(warna[9]);
+// console.log(warna);
+
+// 3.Method Array Push & Pop
+let barbel = [];
+
+// push menambahkan
+barbel.push(20);
+barbel.push(15);
+barbel.push(10);
+barbel.push(5);
+barbel.push(2.5);
+
+// pop mengambil
+// barbel.pop();
+// barbel.pop();
+// barbel.pop();
+// barbel.pop();
+// barbel.pop();
+
+console.log(barbel);
