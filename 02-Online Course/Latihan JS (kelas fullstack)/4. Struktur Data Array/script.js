@@ -27,20 +27,33 @@
 // console.log(warna);
 
 // 3.Method Array Push & Pop
-let barbel = [];
 
-// push menambahkan
+// push menambahkan item pada akhir array
+let barbel = [30, 25];
+
 barbel.push(20);
 barbel.push(15);
 barbel.push(10);
 barbel.push(5);
 barbel.push(2.5);
 
-// pop mengambil
-// barbel.pop();
-// barbel.pop();
-// barbel.pop();
-// barbel.pop();
-// barbel.pop();
+console.log(barbel);
+
+// pop menghapus item dari paling akhir array
+barbel.pop();
+barbel.pop();
+barbel.pop();
+barbel.pop();
 
 console.log(barbel);
+
+//unshift menambahkan item pada pada awal array
+let student = ["Berry", "Charlie ", "Densen", "Edwin"];
+
+student.unshift("Andrew");
+student.unshift("Alex");
+
+//shift menghapus item dari paling awal array
+student.shift();
+
+console.log(student);
