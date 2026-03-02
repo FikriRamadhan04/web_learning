@@ -65,8 +65,14 @@ console.log(student);
 // 5.Splice
 const months = ["Jan", "march", "April", "Jun"];
 
-months.splice(1, 0, "feb");
+months.splice(1, 2, "feb");
 console.log(months);
 
-months.splice(4, 1, "May");
-console.log(months);
+// 6. Slice
+const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+console.log(animals.slice(2));
+console.log(animals.slice(2, 4));
+console.log(animals.slice(1, 5));
+console.log(animals.slice(-2));
+console.log(animals.slice(2, -2));
