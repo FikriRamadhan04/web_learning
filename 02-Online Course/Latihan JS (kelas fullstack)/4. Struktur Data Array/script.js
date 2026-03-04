@@ -73,6 +73,12 @@ const animals = ["ant", "bison", "camel", "duck", "elephant"];
 
 console.log(animals.slice(2));
 console.log(animals.slice(2, 4));
-console.log(animals.slice(1, 5));
+console.log(animals.slice(1, 3));
 console.log(animals.slice(-2));
 console.log(animals.slice(2, -2));
+
+// 7. Tipe Data Reference Type
+const kumpulanWarna = ["Merah", "Kuning", "Hijau"];
+
+kumpulanWarna.push("Biru");
+console.log(kumpulanWarna);
