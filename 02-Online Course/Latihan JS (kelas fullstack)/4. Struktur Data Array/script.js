@@ -77,8 +77,18 @@ console.log(animals.slice(1, 3));
 console.log(animals.slice(-2));
 console.log(animals.slice(2, -2));
 
-// 7. Tipe Data Reference Type
+// 7. Mengubah Nilai Const dengan Array
 const kumpulanWarna = ["Merah", "Kuning", "Hijau"];
 
 kumpulanWarna.push("Biru");
 console.log(kumpulanWarna);
+
+// 8. Array Multidimensi atau Nested Array
+const board = [
+  [null, null, "X"],
+  ["O", "X", null],
+  ["X", null, "O"],
+];
+console.log(board);
+console.log(board[0][2]);
+console.log(board[1][0]);
