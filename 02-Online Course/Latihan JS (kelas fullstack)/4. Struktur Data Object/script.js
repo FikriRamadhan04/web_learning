@@ -23,3 +23,10 @@ const barang = {
     singapore: 50,
   },
 };
+// 3.Cara Memanggil Data Dari Object
+console.log(orang.nama);
+console.log(orang.tanggal);
+console.log(orang.alamat);
+console.log(barang.isReady);
+console.log(barang.location.indonesia);
+console.log(barang.size[1]);
