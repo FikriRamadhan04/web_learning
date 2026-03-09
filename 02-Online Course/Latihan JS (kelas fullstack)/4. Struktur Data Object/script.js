@@ -23,6 +23,7 @@ const barang = {
     singapore: 50,
   },
 };
+
 // 3.Cara Memanggil Data Dari Object
 console.log(orang.nama);
 console.log(orang.tanggal);
@@ -30,3 +31,9 @@ console.log(orang.alamat);
 console.log(barang.isReady);
 console.log(barang.location.indonesia);
 console.log(barang.size[1]);
+
+// 4. Cara Membuat Object Berjalan
+console.log((orang["nama"] = "Febby"));
+console.log((orang.tanggal = 3));
+console.log((orang.alamat = "Medan"));
+console.log((orang.gender = "Perempuan"));
