@@ -37,3 +37,24 @@ console.log((orang["nama"] = "Febby"));
 console.log((orang.tanggal = 3));
 console.log((orang.alamat = "Medan"));
 console.log((orang.gender = "Perempuan"));
+
+// 5. Cara Memanggil Object Di Dalam Array
+const shoppingcart = [
+  {
+    product: "kemeja",
+    price: 50000,
+    quantity: 25,
+  },
+  {
+    product: "jaket",
+    price: 90000,
+    quantity: 20,
+  },
+  {
+    product: "jersey",
+    price: 70000,
+    quantity: 40,
+  },
+];
+
+console.log(shoppingcart[0].product);
