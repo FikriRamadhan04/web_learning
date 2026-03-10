@@ -58,3 +58,24 @@ const shoppingcart = [
 ];
 
 console.log(shoppingcart[0].product);
+
+// contoh 2
+const dataDiri = [
+  {
+    nama: "andi",
+    umur: 23,
+    alamat: "jakarta",
+  },
+  {
+    nama: "brian",
+    umur: 27,
+    alamat: "bali",
+  },
+  {
+    nama: "jack",
+    umur: 32,
+    alamat: "depok",
+  },
+];
+
+console.log(dataDiri[1].nama);
