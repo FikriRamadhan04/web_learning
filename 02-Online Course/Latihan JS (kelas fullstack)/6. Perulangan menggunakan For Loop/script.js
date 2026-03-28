@@ -34,3 +34,10 @@ for (let i = 10; i <= 100000; i *= 10) {
 // for (let i = 20; i >= 0; i++) {
 //   console.log(i);
 // }
+
+// 4. Mendapatkan Data Dari Array Dengan Perulangan
+const animals = ["gajah", "buaya", "monyet", "ayam"];
+
+for (let i = 0; i < animals.length; i++) {
+  console.log(i, animals[i]);
+}
