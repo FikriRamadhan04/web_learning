@@ -29,3 +29,8 @@ for (let i = 20; i >= 0; i--) {
 for (let i = 10; i <= 100000; i *= 10) {
   console.log(i);
 }
+
+// // 3. Awas Perulangan Tanpa Henti
+// for (let i = 20; i >= 0; i++) {
+//   console.log(i);
+// }
