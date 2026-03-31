@@ -47,6 +47,19 @@ const pilihan = "abcd";
 for (let i = 1; i <= 10; i++) {
   console.log(`${i}. Soal nomor ${i}:`);
   for (let j = 0; j < pilihan.length; j++) {
-    console.log(`${pilihan[j]}. Pilihan Jawaban`);
+    console.log(`   ${pilihan[j]}. Pilihan Jawaban`);
   }
+}
+
+// 6. Mendapatkan Data Dari Nested Array Dengan Nested Loop
+
+const studentRow = [
+  ["jack", "syane", "david", "kroos"],
+  ["emma", "william", "billy", "rosy"],
+  ["peter", "mikey", "isabela", "rucas"],
+];
+
+for (let i = 0; i < studentRow.length; i++) {
+  const row = studentRow[i];
+  console.log(row);
 }
