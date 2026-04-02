@@ -61,5 +61,27 @@ const studentRow = [
 
 for (let i = 0; i < studentRow.length; i++) {
   const row = studentRow[i];
-  console.log(row);
+  console.log(`Seat Rowe #${i + 1}`);
+  for (let j = 0; j < row.length; j++) {
+    console.log(`   ${row[j]}`);
+  }
 }
+// 7. Perulangan Menggunakan Perintah While
+let num = 10;
+while (num <= 50) {
+  console.log(num);
+  num++;
+}
+
+for (let num = 10; num <= 50; num++) {
+  console.log(num);
+}
+
+const PASSWORD = "Pass123";
+
+let guess = prompt("enter the password");
+while (guess !== PASSWORD) {
+  guess = prompt("enter the password");
+}
+
+alert("congrats! the password is correct");
