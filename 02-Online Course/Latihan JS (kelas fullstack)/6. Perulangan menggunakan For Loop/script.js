@@ -53,35 +53,45 @@ for (let i = 1; i <= 10; i++) {
 
 // 6. Mendapatkan Data Dari Nested Array Dengan Nested Loop
 
-const studentRow = [
-  ["jack", "syane", "david", "kroos"],
-  ["emma", "william", "billy", "rosy"],
-  ["peter", "mikey", "isabela", "rucas"],
-];
+// const studentRow = [
+//   ["jack", "syane", "david", "kroos"],
+//   ["emma", "william", "billy", "rosy"],
+//   ["peter", "mikey", "isabela", "rucas"],
+// ];
 
-for (let i = 0; i < studentRow.length; i++) {
-  const row = studentRow[i];
-  console.log(`Seat Rowe #${i + 1}`);
-  for (let j = 0; j < row.length; j++) {
-    console.log(`   ${row[j]}`);
-  }
+// for (let i = 0; i < studentRow.length; i++) {
+//   const row = studentRow[i];
+//   console.log(`Seat Rowe #${i + 1}`);
+//   for (let j = 0; j < row.length; j++) {
+//     console.log(`   ${row[j]}`);
+//   }
+// }
+// 7. Perulangan Menggunakan Peritah While
+// let num = 10;
+// while (num <= 50) {
+//   console.log(num);
+//   num++;
+// }
+
+// for (let num = 10; num <= 50; num++) {
+//   console.log(num);
+// }
+
+// const PASSWORD = "Pass123";
+
+// let guess = prompt("enter the password");
+// while (guess !== PASSWORD) {
+//   guess = prompt("enter the password");
+// }
+
+// alert("congrats! the password is correct");
+
+// Kata Kunci Break Untuk Memberhentikan Perulangan
+let input = prompt("Hei, Say something");
+
+while (true) {
+  input = prompt(input);
+  if (input === "stop") break;
 }
-// 7. Perulangan Menggunakan Perintah While
-let num = 10;
-while (num <= 50) {
-  console.log(num);
-  num++;
-}
 
-for (let num = 10; num <= 50; num++) {
-  console.log(num);
-}
-
-const PASSWORD = "Pass123";
-
-let guess = prompt("enter the password");
-while (guess !== PASSWORD) {
-  guess = prompt("enter the password");
-}
-
-alert("congrats! the password is correct");
+alert("ok");
