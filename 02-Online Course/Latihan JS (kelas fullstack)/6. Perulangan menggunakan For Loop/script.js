@@ -12,23 +12,23 @@
 // console.log(9);
 // console.log(10);
 
-for (let i = 1; i <= 10; i++) {
-  console.log("saya ada di dalam loop");
-  console.log(i);
-}
+// for (let i = 1; i <= 10; i++) {
+//   console.log("saya ada di dalam loop");
+//   console.log(i);
+// }
 
 // 2. Contoh Lain perulangan For
-for (let i = 1; i <= 20; i += 2) {
-  console.log(i);
-}
+// for (let i = 1; i <= 20; i += 2) {
+//   console.log(i);
+// }
 
-for (let i = 20; i >= 0; i--) {
-  console.log(i);
-}
+// for (let i = 20; i >= 0; i--) {
+//   console.log(i);
+// }
 
-for (let i = 10; i <= 100000; i *= 10) {
-  console.log(i);
-}
+// for (let i = 10; i <= 100000; i *= 10) {
+//   console.log(i);
+// }
 
 // // 3. Awas Perulangan Tanpa Henti
 // for (let i = 20; i >= 0; i++) {
@@ -36,20 +36,16 @@ for (let i = 10; i <= 100000; i *= 10) {
 // }
 
 // 4. Mendapatkan Data Dari Array Dengan Perulangan
-const animals = ["gajah", "buaya", "monyet", "ayam"];
-
-for (let i = 0; i < animals.length; i++) {
-  console.log(i, animals[i]);
-}
+//
 
 // 5. Pengenalan Nested Loop
-const pilihan = "abcd";
-for (let i = 1; i <= 10; i++) {
-  console.log(`${i}. Soal nomor ${i}:`);
-  for (let j = 0; j < pilihan.length; j++) {
-    console.log(`   ${pilihan[j]}. Pilihan Jawaban`);
-  }
-}
+// const pilihan = "abcd";
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`${i}. Soal nomor ${i}:`);
+//   for (let j = 0; j < pilihan.length; j++) {
+//     console.log(`   ${pilihan[j]}. Pilihan Jawaban`);
+//   }
+// }
 
 // 6. Mendapatkan Data Dari Nested Array Dengan Nested Loop
 
@@ -86,12 +82,22 @@ for (let i = 1; i <= 10; i++) {
 
 // alert("congrats! the password is correct");
 
-// Kata Kunci Break Untuk Memberhentikan Perulangan
-let input = prompt("Hei, Say something");
+// 8. Kata Kunci Break Untuk Memberhentikan Perulangan
+// let input = prompt("Hei, Say something");
 
-while (true) {
-  input = prompt(input);
-  if (input === "stop") break;
+// while (true) {
+//   input = prompt(input);
+//   if (input.toLowerCase() === "stop") break;
+// }
+
+// alert("ok");
+
+// for (let i = 0; i < 10000; i++) {
+//   console.log(i);
+//   if (i === 100) break;
+// }
+
+for (let i = 101; i > 100; i++) {
+  console.log(i);
+  if (i === 200) break;
 }
-
-alert("ok");
