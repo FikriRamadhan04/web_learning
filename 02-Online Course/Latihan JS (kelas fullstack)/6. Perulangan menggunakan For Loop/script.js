@@ -97,27 +97,30 @@
 //   if (i === 100) break;
 // }
 
-for (let i = 101; i > 100; i++) {
-  console.log(i);
-  if (i === 200) break;
-}
+// for (let i = 101; i > 100; i++) {
+//   console.log(i);
+//   if (i === 200) break;
+// }
 
 // 8. Membuat game Tebak Tebakkan angka Dengan While
 let maximum = parseInt(prompt("masukan nilai maksimal!"));
 while (!maximum) {
   maximum = parseInt(prompt("masukan nilai maksimal!"));
-  prompt;
 }
 
 const targetNum = Math.floor(Math.random() * maximum) + 1;
 console.log(targetNum);
 
 let guess = parseInt(prompt("Isi tebakan pertama kamu!"));
+let attempts = 1;
 
-while (guess !== targetNum) {
+while (parseInt(guess) !== targetNum) {
+  attempts++;
   if (guess > targetNum) {
-    guess = prompt("Terlalu tinggi! Tebak lagi:");
+    guess = parseInt(prompt("Terlalu tinggi! Tebak lagi:"));
   } else {
-    guess = prompt("Terlalu rendah! Tebak lagi:");
+    guess = parseInt(prompt("Terlalu rendah! Tebak lagi:"));
   }
 }
+
+alert(`Selamat Tebakan Anda benar! Dengan percobaan ${attempts} kali`);
