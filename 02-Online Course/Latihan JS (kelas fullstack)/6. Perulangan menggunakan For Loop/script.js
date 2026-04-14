@@ -103,24 +103,37 @@
 // }
 
 // 8. Membuat game Tebak Tebakkan angka Dengan While
-let maximum = parseInt(prompt("masukan nilai maksimal!"));
-while (!maximum) {
-  maximum = parseInt(prompt("masukan nilai maksimal!"));
-}
+// let maximum = parseInt(prompt("masukan nilai maksimal!"));
+// while (!maximum) {
+//   maximum = parseInt(prompt("masukan nilai maksimal!"));
+// }
 
-const targetNum = Math.floor(Math.random() * maximum) + 1;
-console.log(targetNum);
+// const targetNum = Math.floor(Math.random() * maximum) + 1;
+// console.log(targetNum);
 
-let guess = parseInt(prompt("Isi tebakan pertama kamu!"));
-let attempts = 1;
+// let guess = parseInt(prompt("Isi tebakan pertama kamu!"));
+// let attempts = 1;
 
-while (parseInt(guess) !== targetNum) {
-  attempts++;
-  if (guess > targetNum) {
-    guess = parseInt(prompt("Terlalu tinggi! Tebak lagi:"));
-  } else {
-    guess = parseInt(prompt("Terlalu rendah! Tebak lagi:"));
+// while (parseInt(guess) !== targetNum) {
+//   attempts++;
+//   if (guess > targetNum) {
+//     guess = parseInt(prompt("Terlalu tinggi! Tebak lagi:"));
+//   } else {
+//     guess = parseInt(prompt("Terlalu rendah! Tebak lagi:"));
+//   }
+// }
+
+// alert(`Selamat Tebakan Anda benar! Dengan percobaan ${attempts} kali`);
+
+// 8. Cara Elegan Melakukan Perulangan Pada Array For Of
+const studentRow = [
+  ["jack", "syane", "david", "kroos"],
+  ["emma", "william", "billy", "rosy"],
+  ["peter", "mikey", "isabela", "rucas"],
+];
+
+for (let row of studentRow) {
+  for (let student of row) {
+    console.log(student);
   }
 }
-
-alert(`Selamat Tebakan Anda benar! Dengan percobaan ${attempts} kali`);
