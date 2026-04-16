@@ -10,16 +10,16 @@
 // }
 
 // 2. Mendefinisikan Dan Menjalankan Function
-// function nyanyi() {
-//   console.log("Cek...");
-//   console.log("Do RE MI...");
-// }
-// nyanyi();
+function nyanyi() {
+  console.log("Cek...");
+  console.log("Do RE MI...");
+}
+nyanyi();
 
 function absensi() {
   console.log("Absen 1");
-  console.log("absen 2");
-  console.log("absen 3");
+  console.log("Absen 2");
+  console.log("Absen 3");
 }
 
 absensi();
@@ -30,15 +30,36 @@ absensi();
 // Jason = Argument;
 
 // Contoh 1
-function greet(name) {
-  console.log(`Hi How Are You, ${name} ?`);
-}
+// function greet(name) {
+//   console.log(`Hi How Are You, ${name} ?`);
+// }
 
-greet("Jason");
+// greet("Jason");
 
 // Contoh 2
-function selamatPagi(name) {
-  console.log(`Hai, Selamat pagi ${name}   ?`);
-}
+// function selamatPagi(name) {
+//   console.log(`Hai, Selamat pagi ${name}   ?`);
+// }
 
-selamatPagi("Kane");
+// selamatPagi("Kane");
+
+// 4. Multiple Parameter dan Argument
+// function jumlahkan(a, b) {
+//   const total = a * b;
+//   console.log(total);
+// }
+// jumlahkan(1, 2);
+
+// 5. Statement Return Pada Function
+// function jumlahkan(b = 1, c = 2) {
+//   let total = b + c;
+//   return total;
+// }
+
+function jumlahkan(a, b) {
+  if (typeof a !== "number" || typeof b !== "number") {
+    return false;
+  }
+
+  return a + b;
+}
