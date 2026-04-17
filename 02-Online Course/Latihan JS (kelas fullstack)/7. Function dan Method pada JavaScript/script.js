@@ -10,19 +10,19 @@
 // }
 
 // 2. Mendefinisikan Dan Menjalankan Function
-function nyanyi() {
-  console.log("Cek...");
-  console.log("Do RE MI...");
-}
-nyanyi();
+// function nyanyi() {
+//   console.log("Cek...");
+//   console.log("Do RE MI...");
+// }
+// nyanyi();
 
-function absensi() {
-  console.log("Absen 1");
-  console.log("Absen 2");
-  console.log("Absen 3");
-}
+// function absensi() {
+//   console.log("Absen 1");
+//   console.log("Absen 2");
+//   console.log("Absen 3");
+// }
 
-absensi();
+// absensi();
 
 // 3. Argument Dan Parameter Dalam Function
 
@@ -56,10 +56,21 @@ absensi();
 //   return total;
 // }
 
-function jumlahkan(a, b) {
+function jumlahkan(a = 3, b = 3) {
   if (typeof a !== "number" || typeof b !== "number") {
-    return false;
+    return "bukan angka";
   }
 
   return a + b;
 }
+
+// 6. Visibilitas Variabel Sesuai Scope Atau Ruang Lingkup
+let programming = "JavaScript";
+
+function typsafe() {
+  let programming = "TypeScript";
+
+  console.log(programming);
+}
+
+typsafe();
