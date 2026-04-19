@@ -56,21 +56,46 @@
 //   return total;
 // }
 
-function jumlahkan(a = 3, b = 3) {
-  if (typeof a !== "number" || typeof b !== "number") {
-    return "bukan angka";
-  }
+// function jumlahkan(a = 3, b = 3) {
+//   if (typeof a !== "number" || typeof b !== "number") {
+//     return "bukan angka";
+//   }
 
-  return a + b;
-}
+//   return a + b;
+// }
 
 // 6. Visibilitas Variabel Sesuai Scope Atau Ruang Lingkup
-let programming = "JavaScript";
+// let programming = "JavaScript";
 
-function typsafe() {
-  let programming = "TypeScript";
+// function typeSafe() {
+//   let programming = "TypeScript";
 
-  console.log(programming);
+//   console.log(programming);
+// }
+
+// typeSafe();
+
+// 7. Blocked Scope Variabel
+// let tinggi = 8;
+
+// if (tinggi > 5) {
+//   let lebar = 10;
+//   // console.log(lebar);
+// }
+
+// console.log(tinggi);
+
+// for (let index = 0; index < 10; index++) {
+//   const indexNumber = index;
+//   console.log(indexNumber);
+// }
+// console.log(indexNumber);
+
+let tinggi = 8;
+
+if (tinggi > 5) {
+  var lebar = 10;
+  console.log(lebar);
 }
 
-typsafe();
+console.log(lebar);
