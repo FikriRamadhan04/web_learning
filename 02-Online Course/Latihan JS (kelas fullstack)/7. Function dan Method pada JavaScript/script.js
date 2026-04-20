@@ -99,3 +99,16 @@ if (tinggi > 5) {
 }
 
 console.log(lebar);
+
+// Lexical Scope
+
+function lamarKerja() {
+  const jabatan = "programmer";
+
+  function orangDalam() {
+    let kenalan = "Orang dalam bisa memasukkan $(jabatan)";
+    console.log(kenalan);
+  }
+
+  orangDalam();
+}
