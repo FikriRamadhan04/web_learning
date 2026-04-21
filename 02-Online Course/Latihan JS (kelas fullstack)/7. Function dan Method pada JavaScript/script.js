@@ -91,14 +91,14 @@
 // }
 // console.log(indexNumber);
 
-let tinggi = 8;
+// let tinggi = 8;
 
-if (tinggi > 5) {
-  var lebar = 10;
-  console.log(lebar);
-}
+// if (tinggi > 5) {
+//   var lebar = 10;
+//   console.log(lebar);
+// }
 
-console.log(lebar);
+// console.log(lebar);
 
 // Lexical Scope
 
@@ -106,9 +106,20 @@ function lamarKerja() {
   const jabatan = "programmer";
 
   function orangDalam() {
-    let kenalan = "Orang dalam bisa memasukkan $(jabatan)";
+    let kenalan = `Orang dalam bisa memasukkan ${jabatan}`;
     console.log(kenalan);
   }
 
   orangDalam();
+}
+
+function hargaBarang() {
+  const roti = 20000;
+
+  function membeli() {
+    let keterangan = `Harga Roti Ini Sebesar ${roti}`;
+    console.log(keterangan);
+  }
+
+  membeli();
 }
