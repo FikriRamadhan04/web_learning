@@ -125,7 +125,7 @@
 
 // alert(`Selamat Tebakan Anda benar! Dengan percobaan ${attempts} kali`);
 
-// 8. Cara Elegan Melakukan Perulangan Pada Array For Of
+// 8. Cara Elegan Melakukan Perulangan Pada Array For Of In
 const studentRow = [
   ["jack", "syane", "david", "kroos"],
   ["emma", "william", "billy", "rosy"],

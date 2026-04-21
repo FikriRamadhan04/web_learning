@@ -54,6 +54,7 @@ let student = ["Berry", "Charlie ", "Densen", "Edwin"];
 
 student.unshift("Andrew");
 student.unshift("Alex");
+student.unshift("Kevin");
 
 console.log(student);
 
@@ -63,9 +64,12 @@ student.shift();
 console.log(student);
 
 // 5.Splice
-const months = ["Jan", "march", "April", "Jun"];
+const months = ["Jan", "March", "Apel", "Juni", "Juli"];
 
-months.splice(1, 2, "feb");
+months.splice(1, 0, "Feb");
+months.splice(4, 0, "Mei");
+months.splice(6, 1);
+months.splice(2, 1, "April");
 console.log(months);
 
 // 6. Slice
