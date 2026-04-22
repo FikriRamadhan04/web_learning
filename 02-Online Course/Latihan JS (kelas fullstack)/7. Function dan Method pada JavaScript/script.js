@@ -98,28 +98,40 @@
 //   console.log(lebar);
 // }
 
-// console.log(lebar);
+// 8. console.log(lebar);
 
 // Lexical Scope
 
-function lamarKerja() {
-  const jabatan = "programmer";
+// function lamarKerja() {
+//   const jabatan = "programmer";
 
-  function orangDalam() {
-    let kenalan = `Orang dalam bisa memasukkan ${jabatan}`;
-    console.log(kenalan);
-  }
+//   function orangDalam() {
+//     let kenalan = `Orang dalam bisa memasukkan ${jabatan}`;
+//     console.log(kenalan);
+//   }
 
-  orangDalam();
-}
+//   orangDalam();
+// }
 
-function hargaBarang() {
-  const roti = 20000;
+// function hargaBarang() {
+//   const roti = 20000;
 
-  function membeli() {
-    let keterangan = `Harga Roti Ini Sebesar ${roti}`;
-    console.log(keterangan);
-  }
+//   function membeli() {
+//     let keterangan = `Harga Roti Ini Sebesar ${roti}`;
+//     console.log(keterangan);
+//   }
 
-  membeli();
-}
+//   membeli();
+// }
+
+// 9. Function Expressions
+// function perpangkatan(nilai) {
+//   return nilai * nilai;
+// }
+
+// let hasil = perpangkatan(5);
+
+// Function Expressions
+const hasilPerpangkatan = function (nilai, pembanding) {
+  return nilai * pembanding;
+};
