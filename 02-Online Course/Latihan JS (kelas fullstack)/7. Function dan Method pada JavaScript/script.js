@@ -132,6 +132,21 @@
 // let hasil = perpangkatan(5);
 
 // Function Expressions
-const hasilPerpangkatan = function (nilai, pembanding) {
-  return nilai * pembanding;
-};
+// const hasilPerpangkatan = function (nilai, pembanding) {
+//   return nilai * pembanding;
+// };
+
+// 10. Function sebagai Argument Function Lain
+function enamKali(func) {
+  func();
+  func();
+  func();
+  func();
+  func();
+  func();
+}
+
+function lemparDadu() {
+  const hasil = Math.floor(Math.random() * 6) + 1;
+  console.log(hasil);
+}
