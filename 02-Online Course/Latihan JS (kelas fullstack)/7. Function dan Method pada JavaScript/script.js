@@ -1,4 +1,4 @@
-// 1. Pengenalan Function Di Javascipt
+// // 1. Pengenalan Function Di Javascipt
 
 // let LemparDadu = Math.floor(Math.random() * 6) + 1;
 // console.log(LemparDadu);
@@ -9,7 +9,7 @@
 //   console.log(Math.floor(Math.random() * 6) + 1);
 // }
 
-// 2. Mendefinisikan Dan Menjalankan Function
+// // 2. Mendefinisikan Dan Menjalankan Function
 // function nyanyi() {
 //   console.log("Cek...");
 //   console.log("Do RE MI...");
@@ -24,33 +24,33 @@
 
 // absensi();
 
-// 3. Argument Dan Parameter Dalam Function
+// // 3. Argument Dan Parameter Dalam Function
 
-// name = Parameter;
-// Jason = Argument;
+// // name = Parameter;
+// // Jason = Argument;
 
-// Contoh 1
+// // Contoh 1
 // function greet(name) {
 //   console.log(`Hi How Are You, ${name} ?`);
 // }
 
 // greet("Jason");
 
-// Contoh 2
+// // Contoh 2
 // function selamatPagi(name) {
-//   console.log(`Hai, Selamat pagi ${name}   ?`);
+//   console.log(`Hai, Selamat pagi ${name}  ?`);
 // }
 
 // selamatPagi("Kane");
 
-// 4. Multiple Parameter dan Argument
+// // 4. Multiple Parameter dan Argument
 // function jumlahkan(a, b) {
 //   const total = a * b;
 //   console.log(total);
 // }
 // jumlahkan(1, 2);
 
-// 5. Statement Return Pada Function
+// // 5. Statement Return Pada Function
 // function jumlahkan(b = 1, c = 2) {
 //   let total = b + c;
 //   return total;
@@ -64,7 +64,7 @@
 //   return a + b;
 // }
 
-// 6. Visibilitas Variabel Sesuai Scope Atau Ruang Lingkup
+// // 6. Visibilitas Variabel Sesuai Scope Atau Ruang Lingkup
 // let programming = "JavaScript";
 
 // function typeSafe() {
@@ -75,7 +75,7 @@
 
 // typeSafe();
 
-// 7. Blocked Scope Variabel
+// // 7. Blocked Scope Variabel
 // let tinggi = 8;
 
 // if (tinggi > 5) {
@@ -124,19 +124,19 @@
 //   membeli();
 // }
 
-// // 9. Function Expressions
+// 9. Function Expressions
 // function perpangkatan(nilai) {
 //   return nilai * nilai;
 // }
 
 // let hasil = perpangkatan(5);
 
-// // Function Expressions
+// Function Expressions
 // const hasilPerpangkatan = function (nilai, pembanding) {
 //   return nilai * pembanding;
 // };
 
-// // 10. Function Sebagai Argument Function Lain
+// 10. Function Sebagai Argument Function Lain
 // function enamKali(func) {
 //   func();
 //   func();
@@ -151,7 +151,7 @@
 //   console.log(hasil);
 // }
 
-// // 11. Function Bernilai Balik Function
+// 11. Function Bernilai Balik Function
 // function hasilnyaAdalahFunction() {
 //   const rand = Math.random();
 //   if (rand > 0.1) {
@@ -169,17 +169,25 @@
 // hasil();
 
 // 12. Definisi Sebuah Method
+// function myFun() {
+//   // Function biasa
+//   console.log("Hi");
+//   return "Hello";
+// }
 
-function myFun() {
-  // Function biasa
-  console.log("Hi");
-  return "Hello";
-}
+// const myMath = {
+//   // Object
+//   perkalian: function (x, y) {
+//     // Method
+//     return x * y;
+//   },
+// };
 
-const myMath = {
-  // Object
-  perkalian: function (x, y) {
-    // Method
-    return x * y;
+// 13. This Adalah Keyword Sakti
+const saya = {
+  nama: "fikri",
+  hobi: "Mancing Keributan",
+  kenalan: function () {
+    return `saya ${this.nama}. hobi saya ${this.hobi}`;
   },
 };
