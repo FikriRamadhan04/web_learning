@@ -9,31 +9,39 @@
 //   console.log(Math.floor(Math.random() * 6) + 1);
 // }
 
-// // 2. Mendefinisikan Dan Menjalankan Function
+// 2. Mendefinisikan Dan Menjalankan Function
 // function nyanyi() {
+// Tubuh fungsi: berisi perintah yang akan dijalankan (MENDIFINISIKAN FUNGSI)
 //   console.log("Cek...");
 //   console.log("Do RE MI...");
 // }
+
+// Pemanggilan fungsi: Tanpa baris ini, kode di dalam fungsi tidak akan pernah jalan (MEMANGGIL/MENJALANKAN FUNGSI)
 // nyanyi();
 
+// MENDIFINISIKAN FUNGSI
 // function absensi() {
 //   console.log("Absen 1");
 //   console.log("Absen 2");
 //   console.log("Absen 3");
 // }
 
+// MEMANGGIL/MENJALANKAN FUNGSI
 // absensi();
 
-// // 3. Argument Dan Parameter Dalam Function
+// 3. Argument Dan Parameter Dalam Function
 
-// // name = Parameter;
-// // Jason = Argument;
+// name = Parameter;
+// Jason = Argument;
 
-// // Contoh 1
+// Contoh 1
+// Deklarasi Fungsi dengan Parameter
 // function greet(name) {
+// Menggunakan Template Literals (tanda backtick `` dan ${})
 //   console.log(`Hi How Are You, ${name} ?`);
 // }
 
+// Pemanggilan Fungsi dengan Argumen
 // greet("Jason");
 
 // // Contoh 2
@@ -43,12 +51,26 @@
 
 // selamatPagi("Kane");
 
-// // 4. Multiple Parameter dan Argument
-// function jumlahkan(a, b) {
-//   const total = a * b;
-//   console.log(total);
-// }
-// jumlahkan(1, 2);
+// 4. Multiple Parameter dan Argument
+// contoh 1
+// Membuat fungsi bernama 'jumlahkan' dengan input a dan b
+function jumlahkan(a, b) {
+  // Proses: mengalikan a dan b, lalu simpan di variabel 'total'
+  const total = a * b;
+
+  // Output: cetak hasil 'total' ke layar
+  console.log(total);
+}
+
+// Eksekusi: jalankan fungsi dengan angka 1 dan 2
+jumlahkan(1, 2);
+
+// contoh 2
+function jumlahkan2(a, b, c) {
+  const total = a * b + c;
+  console.log(total);
+}
+jumlahkan2(10, 5, 3);
 
 // // 5. Statement Return Pada Function
 // function jumlahkan(b = 1, c = 2) {
@@ -193,11 +215,11 @@
 // };
 
 // 13.Try And Catch adalah Penyelamat
-function teriak(msg) {
-  try {
-    console.log(msg.toUpperCase());
-  } catch (error) {
-    console.log("error!!");
-    console.log("Silahkan masukkan tipe data string pada argument teriak()");
-  }
-}
+// function teriak(msg) {
+//   try {
+//     console.log(msg.toUpperCase());
+//   } catch (error) {
+//     console.log("error!!");
+//     console.log("Silahkan masukkan tipe data string pada argument teriak()");
+//   }
+// }
