@@ -44,7 +44,7 @@
 // Pemanggilan Fungsi dengan Argumen
 // greet("Jason");
 
-// // Contoh 2
+// Contoh 2
 // function selamatPagi(name) {
 //   console.log(`Hai, Selamat pagi ${name}  ?`);
 // }
@@ -54,39 +54,65 @@
 // 4. Multiple Parameter dan Argument
 // contoh 1
 // Membuat fungsi bernama 'jumlahkan' dengan input a dan b
-function jumlahkan(a, b) {
-  // Proses: mengalikan a dan b, lalu simpan di variabel 'total'
-  const total = a * b;
+// function jumlahkan(a, b) {
+// Proses: mengalikan a dan b, lalu simpan di variabel 'total'
+// const total = a * b;
 
-  // Output: cetak hasil 'total' ke layar
-  console.log(total);
-}
-
-// Eksekusi: jalankan fungsi dengan angka 1 dan 2
-jumlahkan(1, 2);
-
-// contoh 2
-function jumlahkan2(a, b, c) {
-  const total = a * b + c;
-  console.log(total);
-}
-jumlahkan2(10, 5, 3);
-
-// // 5. Statement Return Pada Function
-// function jumlahkan(b = 1, c = 2) {
-//   let total = b + c;
-//   return total;
+// Output: cetak hasil 'total' ke layar
+//   console.log(total);
 // }
 
-// function jumlahkan(a = 3, b = 3) {
+// Eksekusi: jalankan fungsi dengan angka 1 dan 2
+// jumlahkan(1, 2);
+
+// contoh 2
+// function jumlahkan2(a, b, c) {
+//   const total = a * b + c;
+//   console.log(total);
+// }
+// jumlahkan2(10, 5, 3);
+
+// 5. Statement Return Pada Function
+// contoh 1
+// Mendefinisikan fungsi bernama 'jumlahkan'
+// a = 1 dan b = 2 adalah nilai default jika kita tidak memasukkan angka saat memanggil fungsi
+// function jumlahkan(a, b) {
+//VALIDASI: Cek apakah input 'a' atau 'b' bukan tipe data angka (number)
 //   if (typeof a !== "number" || typeof b !== "number") {
+// Jika ada yang bukan angka, fungsi berhenti di sini dan mengirim pesan error
 //     return "bukan angka";
 //   }
 
-//   return a + b;
+//PROSES: Jika lolos validasi, maka variabel 'total' dibuat untuk menyimpan hasil
+//   let total = a + b;
+
+//OUTPUT: Mengirimkan hasil akhir penjumlahan keluar dari fungsi
+//   return total;
 // }
 
-// // 6. Visibilitas Variabel Sesuai Scope Atau Ruang Lingkup
+// contoh 2
+function hitung(x, y, z) {
+  if (typeof x !== "number" || typeof y !== "number" || typeof z !== "number") {
+    return "bukan angka";
+  }
+  let total = x + y + z;
+  return total;
+}
+
+console.log(hitung(10, 10, 10));
+
+// --- CONTOH CARA PENGGUNAAN ---
+
+// Memanggil fungsi dengan angka normal
+// console.log(jumlahkan(10, 20)); // Hasil: 30
+
+// Memanggil fungsi tanpa argumen (menggunakan nilai default 1 + 2)
+// console.log(jumlahkan()); // Hasil: 3
+
+// Memanggil fungsi dengan input yang salah (string)
+// console.log(jumlahkan(5, "5")); // Hasil: "bukan angka"
+
+// 6. Visibilitas Variabel Sesuai Scope Atau Ruang Lingkup
 // let programming = "JavaScript";
 
 // function typeSafe() {
