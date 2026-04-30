@@ -91,15 +91,15 @@
 // }
 
 // contoh 2
-function hitung(x, y, z) {
-  if (typeof x !== "number" || typeof y !== "number" || typeof z !== "number") {
-    return "bukan angka";
-  }
-  let total = x + y + z;
-  return total;
-}
+// function hitung(x, y, z) {
+//   if (typeof x !== "number" || typeof y !== "number" || typeof z !== "number") {
+//     return "bukan angka";
+//   }
+//   let total = x + y + z;
+//   return total;
+// }
 
-console.log(hitung(10, 10, 10));
+// console.log(hitung(10, 10, 10));
 
 // --- CONTOH CARA PENGGUNAAN ---
 
@@ -113,22 +113,46 @@ console.log(hitung(10, 10, 10));
 // console.log(jumlahkan(5, "5")); // Hasil: "bukan angka"
 
 // 6. Visibilitas Variabel Sesuai Scope Atau Ruang Lingkup
-// let programming = "JavaScript";
 
-// function typeSafe() {
-//   let programming = "TypeScript";
+// contoh1
+// Variabel di bawah ini berada di "Global Scope"
+// Artinya, variabel ini bisa diakses dari mana saja di dalam file ini.
+let programming = "JavaScript";
 
-//   console.log(programming);
-// }
+function typeSafe() {
+  // Variabel di bawah ini berada di "Local Scope" atau "Function Scope"
+  // Namanya sama dengan variabel di atas, tapi karena di dalam fungsi,
+  // JavaScript menganggapnya sebagai variabel yang berbeda (Variable Shadowing).
+  let programming = "TypeScript";
 
-// typeSafe();
+  // Saat dipanggil di sini, JavaScript akan mengambil variabel yang paling dekat cakupannya,
+  // yaitu variabel "TypeScript" yang ada di dalam fungsi ini.
+  console.log(programming);
+}
 
-// // 7. Blocked Scope Variabel
+// Memanggil fungsi typeSafe.
+// Hasilnya akan mencetak "TypeScript" ke konsol.
+typeSafe();
+
+// Catatan Tambahan:
+// Jika kita menjalankan console.log(programming) di luar fungsi ini,
+// yang muncul tetap "JavaScript" karena variabel di dalam fungsi tidak mengubah variabel di luar.
+
+// contoh 2
+let makanSiang = "Nasi Padang";
+
+function lapar() {
+  let makanSiang = "Nasi Goreng";
+  console.log(makanSiang);
+}
+lapar();
+console.log(makanSiang);
+// 7. Blocked Scope Variabel
 // let tinggi = 8;
 
 // if (tinggi > 5) {
 //   let lebar = 10;
-//   // console.log(lebar);
+// console.log(lebar);
 // }
 
 // console.log(tinggi);
