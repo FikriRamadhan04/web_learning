@@ -117,143 +117,175 @@
 // contoh1
 // Variabel di bawah ini berada di "Global Scope"
 // Artinya, variabel ini bisa diakses dari mana saja di dalam file ini.
-let programming = "JavaScript";
+// let programming = "JavaScript";
 
-function typeSafe() {
-  // Variabel di bawah ini berada di "Local Scope" atau "Function Scope"
-  // Namanya sama dengan variabel di atas, tapi karena di dalam fungsi,
-  // JavaScript menganggapnya sebagai variabel yang berbeda (Variable Shadowing).
-  let programming = "TypeScript";
+// function typeSafe() {
+// Variabel di bawah ini berada di "Local Scope" atau "Function Scope"
+// Namanya sama dengan variabel di atas, tapi karena di dalam fungsi,
+// JavaScript menganggapnya sebagai variabel yang berbeda (Variable Shadowing).
+// let programming = "TypeScript";
 
-  // Saat dipanggil di sini, JavaScript akan mengambil variabel yang paling dekat cakupannya,
-  // yaitu variabel "TypeScript" yang ada di dalam fungsi ini.
-  console.log(programming);
-}
+// Saat dipanggil di sini, JavaScript akan mengambil variabel yang paling dekat cakupannya,
+// yaitu variabel "TypeScript" yang ada di dalam fungsi ini.
+//   console.log(programming);
+// }
 
 // Memanggil fungsi typeSafe.
 // Hasilnya akan mencetak "TypeScript" ke konsol.
-typeSafe();
+// typeSafe();
 
 // Catatan Tambahan:
 // Jika kita menjalankan console.log(programming) di luar fungsi ini,
 // yang muncul tetap "JavaScript" karena variabel di dalam fungsi tidak mengubah variabel di luar.
 
 // contoh 2
-let makanSiang = "Nasi Padang";
+// let makanSiang = "Nasi Padang";
 
-function lapar() {
-  let makanSiang = "Nasi Goreng";
-  console.log(makanSiang);
-}
-lapar();
-console.log(makanSiang);
+// function lapar() {
+//   let makanSiang = "Nasi Goreng";
+//   console.log(makanSiang);
+// }
+// lapar();
+// console.log(makanSiang);
+
 // 7. Blocked Scope Variabel
+// Deklarasi variabel 'tinggi' menggunakan 'let' (Block Scope)
 // let tinggi = 8;
 
 // if (tinggi > 5) {
+// 'lebar' dideklarasikan di dalam blok IF menggunakan 'let'
+// Variabel ini HANYA bisa diakses di dalam kurung kurawal ini {}
 //   let lebar = 10;
-// console.log(lebar);
+//   console.log(lebar); // Output: 10
 // }
 
-// console.log(tinggi);
+// Baris di bawah ini akan error jika kamu mencoba console.log(lebar)
+// karena 'lebar' tidak dikenal di luar blok IF.
 
-// for (let index = 0; index < 10; index++) {
-//   const indexNumber = index;
-//   console.log(indexNumber);
-// }
+// console.log(tinggi); // Output: 8 (Tinggi bisa diakses karena berada di scope global/luar)
+
+// contoh 2
+let tinggi = 10;
+let lebar;
+if (tinggi > 7) {
+  let lebar = 100;
+  console.log(lebar);
+}
+console.log(tinggi);
+console.log("Ini lebar diluar block: " + lebar);
+
+// Perulangan FOR
+for (let index = 0; index < 10; index++) {
+  // 'indexNumber' dideklarasikan dengan 'const' di dalam blok FOR
+  const indexNumber = index;
+  console.log(indexNumber); // Output: 0 sampai 9
+}
+
+// ERROR DI SINI:
 // console.log(indexNumber);
+// Penjelasan: 'indexNumber' dideklarasikan di dalam blok perulangan.
+// Begitu keluar dari loop, variabel tersebut "mati" atau tidak terdefinisi.
 
-// let tinggi = 8;
+// ---------------------------------------------------------
 
-// if (tinggi > 5) {
-//   var lebar = 10;
-//   console.log(lebar);
-// }
+// CATATAN PENTING:
+// Jika kamu menjalankan ulang "let tinggi = 8;" di file yang sama,
+// JavaScript akan mengeluarkan error "Identifier 'tinggi' has already been declared".
+
+if (tinggi > 5) {
+  // Menggunakan 'var' (Function/Global Scope)
+  // Berbeda dengan 'let', 'var' TIDAK peduli dengan blok IF.
+  var lebarBaru = 10;
+  console.log(lebarBaru); // Output: 10
+}
+
+// Karena menggunakan 'var', variabel ini tetap bisa diakses di luar blok IF:
+console.log(lebarBaru); // Output: 10 (Tidak error)
 
 // 8. console.log(lebar);
 
 // Lexical Scope
 
-// function lamarKerja() {
-//   const jabatan = "programmer";
+function lamarKerja() {
+  const jabatan = "programmer";
 
-//   function orangDalam() {
-//     let kenalan = `Orang dalam bisa memasukkan ${jabatan}`;
-//     console.log(kenalan);
-//   }
+  function orangDalam() {
+    let kenalan = `Orang dalam bisa memasukkan ${jabatan}`;
+    console.log(kenalan);
+  }
 
-//   orangDalam();
-// }
+  orangDalam();
+}
 
-// function hargaBarang() {
-//   const roti = 20000;
+function hargaBarang() {
+  const roti = 20000;
 
-//   function membeli() {
-//     let keterangan = `Harga Roti Ini Sebesar ${roti}`;
-//     console.log(keterangan);
-//   }
+  function membeli() {
+    let keterangan = `Harga Roti Ini Sebesar ${roti}`;
+    console.log(keterangan);
+  }
 
-//   membeli();
-// }
+  membeli();
+}
 
 // 9. Function Expressions
-// function perpangkatan(nilai) {
-//   return nilai * nilai;
-// }
+function perpangkatan(nilai) {
+  return nilai * nilai;
+}
 
-// let hasil = perpangkatan(5);
+let hasil = perpangkatan(5);
 
 // Function Expressions
-// const hasilPerpangkatan = function (nilai, pembanding) {
-//   return nilai * pembanding;
-// };
+const hasilPerpangkatan = function (nilai, pembanding) {
+  return nilai * pembanding;
+};
 
 // 10. Function Sebagai Argument Function Lain
-// function enamKali(func) {
-//   func();
-//   func();
-//   func();
-//   func();
-//   func();
-//   func();
-// }
+function enamKali(func) {
+  func();
+  func();
+  func();
+  func();
+  func();
+  func();
+}
 
-// function lemparDadu() {
-//   const hasil = Math.floor(Math.random() * 6) + 1;
-//   console.log(hasil);
-// }
+function lemparDadu() {
+  const hasil = Math.floor(Math.random() * 6) + 1;
+  console.log(hasil);
+}
 
 // 11. Function Bernilai Balik Function
-// function hasilnyaAdalahFunction() {
-//   const rand = Math.random();
-//   if (rand > 0.1) {
-//     return function () {
-//       console.log("Selamat, angkanya lebih besar");
-//     };
-//   } else {
-//     return function () {
-//       console.log("Maaf , mungkin bisa coba lagi");
-//     };
-//   }
-// }
-// const result = hasilnyaAdalahFunction();
+function hasilnyaAdalahFunction() {
+  const rand = Math.random();
+  if (rand > 0.1) {
+    return function () {
+      console.log("Selamat, angkanya lebih besar");
+    };
+  } else {
+    return function () {
+      console.log("Maaf , mungkin bisa coba lagi");
+    };
+  }
+}
+const result = hasilnyaAdalahFunction();
 // result();
 // hasil();
 
 // 12. Definisi Sebuah Method
-// function myFun() {
-//   // Function biasa
-//   console.log("Hi");
-//   return "Hello";
-// }
+function myFun() {
+  // Function biasa
+  console.log("Hi");
+  return "Hello";
+}
 
-// const myMath = {
-//   // Object
-//   perkalian: function (x, y) {
-//     // Method
-//     return x * y;
-//   },
-// };
+const myMath = {
+  // Object
+  perkalian: function (x, y) {
+    // Method
+    return x * y;
+  },
+};
 
 // 13. This Adalah Keyword Sakti
 // const saya = {
