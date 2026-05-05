@@ -165,22 +165,29 @@
 // console.log(tinggi); // Output: 8 (Tinggi bisa diakses karena berada di scope global/luar)
 
 // contoh 2
-let tinggi = 10;
-let lebar;
-if (tinggi > 7) {
-  let lebar = 100;
-  console.log(lebar);
-}
-console.log(tinggi);
-console.log("Ini lebar diluar block: " + lebar);
+// let tinggi = 200;
+// let lebar;
+// if (tinggi > 7) {
+//   lebar = 90;
+//   console.log(lebar);
+// }
+// console.log(tinggi);
+// console.log("Ini lebar diluar block: " + lebar);
 
-// Perulangan FOR
-for (let index = 0; index < 10; index++) {
-  // 'indexNumber' dideklarasikan dengan 'const' di dalam blok FOR
-  const indexNumber = index;
-  console.log(indexNumber); // Output: 0 sampai 9
-}
+// Perulangan FOR contoh 1
+// for (let index = 0; index < 10; index++) {
+//   // 'indexNumber' dideklarasikan dengan 'const' di dalam blok FOR
+//   const indexNumber = index;
+//   console.log(indexNumber); // Output: 0 sampai 9
+// }
 
+// console.log(indexNumber); // tidak terdefinisi karean diluar loop
+
+// Perulangan FOR contoh 2
+for (let index = 10; index < 30; index++) {
+  const indexnumber = index;
+  console.log(indexnumber);
+}
 // ERROR DI SINI:
 // console.log(indexNumber);
 // Penjelasan: 'indexNumber' dideklarasikan di dalam blok perulangan.
