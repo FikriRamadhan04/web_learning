@@ -47,25 +47,32 @@ keranjangBelanja.forEach((barang, index) => {
 // Kamu punya daftar nama, lalu kamu ingin mengubah semuanya jadi huruf kapital untuk disimpan di daftar baru.
 
 // - Inisialisasi Array
-const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // - Proses Mapping
 // - const angkaDouble: Menyiapkan variabel baru untuk menampung hasil akhir dari proses map.
 // - angka.map(...): Memanggil metode .map() pada array angka.
 // - function (num): Ini adalah callback function. JavaScript akan menjalankan fungsi ini sebanyak 9 kali (sesuai jumlah isi array). Setiap kali jalan, satu angka dari array dimasukkan ke dalam parameter num.
 // - return num * 2: Inilah instruksi perubahannya. Setiap angka yang masuk (num) akan dikali 2, lalu hasilnya "dikembalikan" untuk disusun ke dalam array baru.
-const angkaDouble = angka.map(function (num) {
-  return num * 2;
-});
-console.log(angka);
-console.log(angkaDouble);
+// const angkaDouble = angka.map(function (num) {
+//   return num * 2;
+// });
+// console.log(angka);
+// console.log(angkaDouble);
 
 // 3. Arrow Function
 
-// const perpangkatan = (x) => {
-//   return x * x;
-// };
+// function biasa
+const harga = [10000, 20000, 30000, 40000, 50000, 60000];
 
-const random = () => {
-  return Math.floor(Math.random() * 1000);
-};
+const murah = harga.filter(function (item) {
+  return item < 40000;
+});
+
+console.log(murah);
+
+// arrow function
+const harga2 = [100000, 200000, 300000, 400000, 600000];
+
+const murah2 = harga2.filter((item) => item > 300000);
+console.log(murah2);
