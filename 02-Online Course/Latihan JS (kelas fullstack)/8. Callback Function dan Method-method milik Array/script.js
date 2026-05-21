@@ -15,7 +15,7 @@ angka.forEach(function (antrian) {
   }
 });
 
-// contoh 2 (jadi for.Each itu tuganya memriksa data di dalam array  satu persatu, dan if else tugasnya yang memutuskan, kalo module itu  aturannya bisa diganti sesuai kebutuhan)
+// contoh 2 (jadi for.Each itu tuganya memeriksa data di dalam array  satu persatu, dan if else tugasnya yang memutuskan, kalo module itu  aturannya bisa diganti sesuai kebutuhan)
 // Misal Pemenang Undian
 
 // deklarasi nilai array, misal pemenang undiannya (misal ada 1.000 lebih)
@@ -28,7 +28,7 @@ const daftarPemenang = [24, 34, 929, 56, 45];
 
 // gunakan metode .forEach() untuk mengecek data array
 peserta.forEach(function (nomor) {
-  // keputusan da function untuk menentukan pemenang
+  // keputusan dan function untuk menentukan pemenang
   if (daftarPemenang.includes(nomor)) {
     console.log(`nomor ${nomor} kamu menang`);
   } else {
@@ -76,3 +76,23 @@ const harga2 = [100000, 200000, 300000, 400000, 600000];
 
 const murah2 = harga2.filter((item) => item > 300000);
 console.log(murah2);
+
+// arrow filter & map
+const harga3 = [10, 20, 30, 40, 50, 60, 70];
+
+const murah3 = harga3
+  .filter((item) => item > 40)
+  .map((item) => item * Math.random);
+console.log(murah3);
+
+const nomor = [1, 2, 3, 4, 5, 7, 8, 9, 10];
+
+const total = nomor
+  .filter((nomor) => nomor < 7)
+  .map((item) => item * 7 - 2 * 2);
+console.log(total);
+
+// 4. Return Secara Implisit Dari arrow Function
+const random = () => Math.floor(Math.random() * 1000);
+
+const add = (a, b) => a + b;
