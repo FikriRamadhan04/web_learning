@@ -93,6 +93,37 @@ const total = nomor
 console.log(total);
 
 // 4. Return Secara Implisit Dari arrow Function
-const random = () => Math.floor(Math.random() * 1000);
 
-const add = (a, b) => a + b;
+// Menggunakan Fungsi Biasa (Explicit)
+const kuadrat = function (x, y) {
+  return x * y;
+};
+
+console.log(kuadrat(4, 2));
+
+// Menggunakan Arrow Function Standar (Explicit)
+const kuadrat2 = (x, y) => {
+  return x * y;
+};
+console.log(kuadrat2(3, 2));
+
+// Menggunakan Arrow Function (Implicit Return)
+const bilanganBulat = (x, y) => x + y;
+console.log(bilanganBulat(7, 7));
+
+// Hubungannya dengan Method Array (Callback)
+// Kasus: Mengalikan semua angka di dalam array dengan 2
+
+// Pendekatan Tradisional Explicit Return (.map + arrow back + explisit return)
+const diskon = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const dikaliDua = diskon.map((num) => {
+  return num * 2;
+});
+console.log(dikaliDua);
+
+// Pendekatan Tradisional Implisit Return (.map + arrow back + explisit return)
+const diskonDua = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const dikaliTujuh = diskonDua.map((num) => num * 3);
+console.log(dikaliTujuh);
