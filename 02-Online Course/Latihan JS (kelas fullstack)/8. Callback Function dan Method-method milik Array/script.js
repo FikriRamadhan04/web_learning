@@ -127,3 +127,13 @@ const diskonDua = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const dikaliTujuh = diskonDua.map((num) => num * 3);
 console.log(dikaliTujuh);
+
+//  5. Memahami Settimeout Dan Setinterval
+
+// Settimeout
+console.log("Halo...");
+
+(setTimeout(() => {
+  console.log("Masih disana gak...");
+}),
+  3000);
