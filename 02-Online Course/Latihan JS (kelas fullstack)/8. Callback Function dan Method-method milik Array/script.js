@@ -130,10 +130,16 @@ console.log(dikaliTujuh);
 
 //  5. Memahami Settimeout Dan Setinterval
 
-// Settimeout
+// Settimeout = menunggu proses setiap waktu yang ditentukan
 console.log("Halo...");
 
-(setTimeout(() => {
+setTimeout(() => {
   console.log("Masih disana gak...");
-}),
-  3000);
+}, 5000);
+
+console.log("saya pergi ya..");
+
+// setinterval = mengulang proses setiap waktu yang ditentukan
+const hitung = setInterval(() => {
+  console.log(Math.random());
+}, 3000);
