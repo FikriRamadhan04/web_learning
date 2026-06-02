@@ -131,15 +131,44 @@ console.log(dikaliTujuh);
 //  5. Memahami Settimeout Dan Setinterval
 
 // Settimeout = menunggu proses setiap waktu yang ditentukan
-console.log("Halo...");
 
-setTimeout(() => {
-  console.log("Masih disana gak...");
-}, 5000);
+// contoh 1
+// console.log("Halo...");
 
-console.log("saya pergi ya..");
+// setTimeout(() => {
+//   console.log("Masih disana gak...");
+// }, 5000);
+
+// console.log("saya pergi ya..");
+
+// contoh 2 - Menggunakan promise dan async/await.
+// JavaScript dipaksa untuk benar-benar berhenti dan menunggu baris tersebut selesai, baru boleh lanjut ke baris berikutnya.
+
+// Membuat Fungsi "Tukang Nunggu"
+// ms: Adalah durasi waktu dalam milidetik yang kita kirim (misal 3000).
+// new Promise(...): Kita membuat "perjanjian" dengan JavaScript.
+// resolve: Ini adalah tombol saklar yang memberi tahu JavaScript, bahwa program 1 sudah selesai lanjut program lain.
+// Jadi, fungsi ini intinya bilang: "Tunggu selama ms milidetik, kalau sudah selesai, pencet tombol resolve ya."
+const tunggu = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// Menjalankan Fungsi Secara Berurutan
+// Agar kita bisa menggunakan kata kunci await (tunggu), fungsinya harus diawali dengan kata kunci async.
+async function kenalan() {
+  console.log("Saya...");
+
+  await tunggu(3000); // Nunggu 3 detik
+  console.log("Fikri Ramdhan...");
+
+  await tunggu(3000); // Nunggu 3 detik lagi setelah Fikri muncul
+  console.log("Dari...");
+
+  await tunggu(3000); // Nunggu 3 detik lagi setelah Dari muncul
+  console.log("Indonesia...");
+}
+
+kenalan();
 
 // setinterval = mengulang proses setiap waktu yang ditentukan
-const hitung = setInterval(() => {
-  console.log(Math.random());
-}, 3000);
+// const hitung = setInterval(() => {
+//   console.log(Math.random());
+// }, 3000);
