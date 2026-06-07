@@ -136,7 +136,7 @@ console.log(dikaliTujuh);
 // console.log("Halo...");
 
 // setTimeout(() => {
-//   console.log("Masih disana gak...");
+//   console.log("Masih disana enggak ?...");
 // }, 5000);
 
 // console.log("saya pergi ya..");
@@ -149,26 +149,80 @@ console.log(dikaliTujuh);
 // new Promise(...): Kita membuat "perjanjian" dengan JavaScript.
 // resolve: Ini adalah tombol saklar yang memberi tahu JavaScript, bahwa program 1 sudah selesai lanjut program lain.
 // Jadi, fungsi ini intinya bilang: "Tunggu selama ms milidetik, kalau sudah selesai, pencet tombol resolve ya."
-const tunggu = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+// const tunggu = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-// Menjalankan Fungsi Secara Berurutan
-// Agar kita bisa menggunakan kata kunci await (tunggu), fungsinya harus diawali dengan kata kunci async.
-async function kenalan() {
-  console.log("Saya...");
+// // Menjalankan Fungsi Secara Berurutan
+// // Agar kita bisa menggunakan kata kunci await (tunggu), fungsinya harus diawali dengan kata kunci async.
+// async function kenalan() {
+//   console.log("Saya...");
 
-  await tunggu(3000); // Nunggu 3 detik
-  console.log("Fikri Ramdhan...");
+//   await tunggu(3000); // Nunggu 3 detik
+//   console.log("Fikri Ramdhan...");
 
-  await tunggu(3000); // Nunggu 3 detik lagi setelah Fikri muncul
-  console.log("Dari...");
+//   await tunggu(3000); // Nunggu 3 detik lagi setelah Fikri muncul
+//   console.log("Dari...");
 
-  await tunggu(3000); // Nunggu 3 detik lagi setelah Dari muncul
-  console.log("Indonesia...");
-}
+//   await tunggu(3000); // Nunggu 3 detik lagi setelah Dari muncul
+//   console.log("Indonesia...");
+// }
 
-kenalan();
+// kenalan();
+
+// const tunggu2 = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// async function kenalan2() {
+//   console.log("Halo...");
+
+//   await tunggu2(3000);
+//   console.log("Saya...");
+
+//   await tunggu2(3000);
+//   console.log("Fikri Ramadhan...");
+
+//   await tunggu2(3000);
+//   console.log("Yes...");
+// }
+
+// kenalan2();
 
 // setinterval = mengulang proses setiap waktu yang ditentukan
+// contoh 1
 // const hitung = setInterval(() => {
 //   console.log(Math.random());
 // }, 3000);
+
+// const hitung = setInterval(() => {
+//   console.log(Math.random());
+// }, 3000);
+
+// contoh 2 - Membuat Countdown Timer (waktu hitung mundur)
+// Tentukan waktu mulai (dalam detik)
+// let detikTersisa = 1;
+
+// console.log("=== COUNTDOWN DIMULAI ===");
+// console.log(`Waktu awal: ${detikTersisa} detik`);
+
+// Jalankan setInterval dan simpan ke dalam variabel 'timer'
+// const timer = setInterval(() => {
+// Kurangi waktu sebanyak 1 detik setiap kali fungsi ini berjalan
+// detikTersisa--;
+
+// Tampilkan sisa waktu saat ini ke console
+// console.log(`Sisa waktu: ${detikTersisa} detik...`);
+
+// Cek apakah waktu sudah habis (menyentuh angka 0)
+// if (detikTersisa === 0) {
+//   console.log("⏱️ BUMMM! Waktu habis!");
+
+// WAJIB: Hentikan setInterval agar tidak berjalan terus di latar belakang
+//     clearInterval(timer);
+//     console.log("=== TIMER BERHENTI ===");
+//   }
+// }, 1000); // 1000 milidetik = 1 detik
+
+//  6. Memilih Data Tertentu Di Dalam Array Dengan Filter Method
+const angka2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const angkaGanjil = angka2.filter((n) => {
+  return n % 2 === 0;
+});
