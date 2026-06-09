@@ -130,7 +130,7 @@ console.log(dikaliTujuh);
 
 //  5. Memahami Settimeout Dan Setinterval
 
-// Settimeout = menunggu proses setiap waktu yang ditentukan
+// - Settimeout = menunggu proses setiap waktu yang ditentukan
 
 // contoh 1
 // console.log("Halo...");
@@ -174,23 +174,19 @@ console.log(dikaliTujuh);
 //   console.log("Halo...");
 
 //   await tunggu2(3000);
-//   console.log("Saya...");
+//   console.log("saya fikri ramadhan...");
 
 //   await tunggu2(3000);
-//   console.log("Fikri Ramadhan...");
+//   console.log("berasal...");
 
 //   await tunggu2(3000);
-//   console.log("Yes...");
+//   console.log("dari Indonesia...");
 // }
 
 // kenalan2();
 
-// setinterval = mengulang proses setiap waktu yang ditentukan
+// - setinterval = mengulang proses setiap waktu yang ditentukan
 // contoh 1
-// const hitung = setInterval(() => {
-//   console.log(Math.random());
-// }, 3000);
-
 // const hitung = setInterval(() => {
 //   console.log(Math.random());
 // }, 3000);
@@ -221,8 +217,21 @@ console.log(dikaliTujuh);
 // }, 1000); // 1000 milidetik = 1 detik
 
 //  6. Memilih Data Tertentu Di Dalam Array Dengan Filter Method
-const angka2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const angka2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const angkaGanjil = angka2.filter((n) => {
-  return n % 2 === 0;
+// mencari angka genap, dengan sisa bagi-nya 0
+// const angkaGenap = angka2.filter((n) => {
+//   return n % 2 === 0; // Memeriksa apakah sisa baginya 0
+// });
+
+// mencari angka ganjil, dengan sisa bagi-nya 0
+const angka3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const angkaGanjil = angka3.filter((n) => {
+  return n % 2 === 1; // Memeriksa apakah sisa baginya 1
 });
+
+// Menggunakan Arrow Function yang Lebih Ringkas (Shorthand)
+const angka4 = [5, 10, 15, 20, 36, 37, 38, 40];
+
+const angkaGanjil2 = angka4.filter((n) => n % 2 === 0);
