@@ -251,7 +251,10 @@ const anime = [
   { id: 4, title: "Dragon Ball", rating: 87, year: 2004 },
 ];
 
-const animeBagus = anime.filter((anime) => anime.rating <= 85);
+// const animeBagus = anime.filter((anime) => anime.rating >= 85);
+const animeBagus = anime
+  .filter((item) => item.rating > 85)
+  .map((item) => item.title);
 
 const makanan = [
   { id: 1, nama: "Nasi Goreng", rating: 10 },
@@ -271,3 +274,19 @@ const makanan = [
 const makananFavorit = makanan
   .filter((item) => item.rating >= 7)
   .map((item) => item.nama);
+
+// Menentukan Benar Atau Salah Pada Array Dengan Every Dan Some Method
+
+// Every
+const examScore = [77, 78, 89, 90, 100, 99];
+const isGraduate = examScore.every((score) => score >= 75);
+
+// Some
+const animes = [
+  { id: 1, title: "Naruto", rating: 90, year: 2011 },
+  { id: 2, title: "Hunter x Hunter", rating: 88, year: 2011 },
+  { id: 3, title: "Boruto", rating: 85, year: 2017 },
+  { id: 4, title: "Dragon Ball", rating: 87, year: 2004 },
+];
+
+const isAnimeListNew = animes.some((anime) => anime.year > 2026);
