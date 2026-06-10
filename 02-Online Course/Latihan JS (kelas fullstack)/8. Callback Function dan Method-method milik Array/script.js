@@ -217,21 +217,57 @@ console.log(dikaliTujuh);
 // }, 1000); // 1000 milidetik = 1 detik
 
 //  6. Memilih Data Tertentu Di Dalam Array Dengan Filter Method
-// const angka2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 // mencari angka genap, dengan sisa bagi-nya 0
 // const angkaGenap = angka2.filter((n) => {
 //   return n % 2 === 0; // Memeriksa apakah sisa baginya 0
 // });
 
-// mencari angka ganjil, dengan sisa bagi-nya 0
-const angka3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// mencari angka ganjil, dengan sisa bagi-nya 1
+// const angka3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const angkaGanjil = angka3.filter((n) => {
-  return n % 2 === 1; // Memeriksa apakah sisa baginya 1
-});
+// const angkaGanjil = angka3.filter((n) => {
+//   return n % 2 === 1; // Memeriksa apakah sisa baginya 1
+// });
 
 // Menggunakan Arrow Function yang Lebih Ringkas (Shorthand)
-const angka4 = [5, 10, 15, 20, 36, 37, 38, 40];
+// const angka4 = [5, 10, 15, 20, 36, 37, 38, 40];
+// const angkagenap2 = angka4.filter((n) => n % 2 === 0);
 
-const angkaGanjil2 = angka4.filter((n) => n % 2 === 0);
+// Contoh Visualisasi Program To-Do List (filter + arrow)
+const listTugas = [
+  { id: 1, tugas: "Olahraga", selesai: true },
+  { id: 2, Tugas: "Belajar", selesai: false },
+  { id: 3, Tugas: "Makan", selesai: true },
+];
+
+const tugasPending = listTugas.filter((item) => item.selesai === false);
+
+// studi kasus mencari daftar anime rating di atas 85 dengan filter
+const anime = [
+  { id: 1, title: "Naruto", rating: 90, year: 2011 },
+  { id: 2, title: "Hunter x Hunter", rating: 88, year: 2011 },
+  { id: 3, title: "Boruto", rating: 85, year: 2017 },
+  { id: 4, title: "Dragon Ball", rating: 87, year: 2004 },
+];
+
+const animeBagus = anime.filter((anime) => anime.rating <= 85);
+
+const makanan = [
+  { id: 1, nama: "Nasi Goreng", rating: 10 },
+  { id: 2, nama: "ketoprak", rating: 8 },
+  { id: 3, nama: "Soto Betawi", rating: 9 },
+  { id: 4, nama: "Mie Ayam", rating: 7 },
+  { id: 5, nama: "bakso", rating: 6 },
+  { id: 6, nama: "gorengan", rating: 5 },
+  { id: 7, nama: "batagor", rating: 4 },
+];
+
+// di filter
+// const makananFavorit = makanan.filter((item) => item.rating >= 7);
+// di mapping
+// const namaMakananenak = makananFavorit.map((item) => item.nama);
+// dalam satu syntak
+const makananFavorit = makanan
+  .filter((item) => item.rating >= 7)
+  .map((item) => item.nama);
