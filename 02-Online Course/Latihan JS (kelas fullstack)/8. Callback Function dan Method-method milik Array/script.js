@@ -275,13 +275,30 @@ const makananFavorit = makanan
   .filter((item) => item.rating >= 7)
   .map((item) => item.nama);
 
-// Menentukan Benar Atau Salah Pada Array Dengan Every Dan Some Method
+// 7. Menentukan Benar Atau Salah Pada Array Dengan Every Dan Some Method
 
-// Every
+// Every (Semua elemen harus lolos kondisi - "Apakah semua siswa lulus KKM?")
 const examScore = [77, 78, 89, 90, 100, 99];
 const isGraduate = examScore.every((score) => score >= 75);
 
-// Some
+// Every di dalam form login
+const inputs = [
+  { field: "username", isValid: true },
+  { filed: "Email", isValid: true },
+  { filed: "password", isValid: false },
+];
+
+const isFromValid = inputs.every((input) => input.isValid); // hasil false - karena salah satu kondisi tidka lolos (harus loos smeua)
+
+const inputs2 = [
+  { field: "username", isValid: true },
+  { filed: "Email", isValid: true },
+  { filed: "password", isValid: true },
+];
+
+const isFromValid2 = inputs2.every((input2) => input2.isValid); // hasil true - karena semua kondisi lolos
+
+// Some (Minimal satu elemen lolos kondisi - kondisi.	"Apakah ada minimal satu anime rilisan minimal di aats tahun 2011")
 const animes = [
   { id: 1, title: "Naruto", rating: 90, year: 2011 },
   { id: 2, title: "Hunter x Hunter", rating: 88, year: 2011 },
@@ -289,4 +306,10 @@ const animes = [
   { id: 4, title: "Dragon Ball", rating: 87, year: 2004 },
 ];
 
-const isAnimeListNew = animes.some((anime) => anime.year > 2026);
+const isAnimeListNew = animes.some((anime) => anime.year > 2011); //hasil true - karena salah satu kondisi lolos
+
+// 8. Mendapatkan Satu Nilai Sesuai Kondisi Dari Sebuah Array Dengan Reduce
+const examScore2 = [77, 78, 89, 90, 100, 99];
+const total2 = examScore2.reduce((total2, score2) => {
+  return total2 + score2;
+});
