@@ -282,6 +282,7 @@ const examScore = [77, 78, 89, 90, 100, 99];
 const isGraduate = examScore.every((score) => score >= 75);
 
 // Every di dalam form login
+// 1 every
 const inputs = [
   { field: "username", isValid: true },
   { filed: "Email", isValid: true },
@@ -290,6 +291,7 @@ const inputs = [
 
 const isFromValid = inputs.every((input) => input.isValid); // hasil false - karena salah satu kondisi tidka lolos (harus loos smeua)
 
+// 2 every
 const inputs2 = [
   { field: "username", isValid: true },
   { filed: "Email", isValid: true },
@@ -299,6 +301,7 @@ const inputs2 = [
 const isFromValid2 = inputs2.every((input2) => input2.isValid); // hasil true - karena semua kondisi lolos
 
 // Some (Minimal satu elemen lolos kondisi - kondisi.	"Apakah ada minimal satu anime rilisan minimal di aats tahun 2011")
+// 1 some
 const animes = [
   { id: 1, title: "Naruto", rating: 90, year: 2011 },
   { id: 2, title: "Hunter x Hunter", rating: 88, year: 2011 },
@@ -309,7 +312,17 @@ const animes = [
 const isAnimeListNew = animes.some((anime) => anime.year > 2011); //hasil true - karena salah satu kondisi lolos
 
 // 8. Mendapatkan Satu Nilai Sesuai Kondisi Dari Sebuah Array Dengan Reduce
+// menjumlahkan semua angka di dalam array examScore2
+// total2 (disebut juga accumulator): Ini adalah variabel penampung yang menyimpan hasil penjumlahan sementara dari elemen-elemen sebelumnya.
+// score2 (disebut juga current value): Ini adalah elemen array yang sedang diproses saat itu (berjalan bergantian dari index pertama sampai terakhir).
 const examScore2 = [77, 78, 89, 90, 100, 99];
 const total2 = examScore2.reduce((total2, score2) => {
   return total2 + score2;
 });
+console.log(total2);
+
+const examScore3 = [75, 80, 90, 60, 100, 85, 88];
+const total3 = examScore3.reduce((total3, jumlah) => {
+  return total3 + jumlah;
+});
+console.log(total3);
