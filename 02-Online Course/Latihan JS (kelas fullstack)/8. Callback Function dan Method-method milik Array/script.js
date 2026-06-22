@@ -312,7 +312,7 @@ const animes = [
 const isAnimeListNew = animes.some((anime) => anime.year > 2011); //hasil true - karena salah satu kondisi lolos
 
 // 8. Mendapatkan Satu Nilai Sesuai Kondisi Dari Sebuah Array Dengan Reduce
-// menjumlahkan semua angka di dalam array examScore2
+// contoh 1 menjumlahkan semua angka di dalam array examScore2
 // total2 (disebut juga accumulator): Ini adalah variabel penampung yang menyimpan hasil penjumlahan sementara dari elemen-elemen sebelumnya.
 // score2 (disebut juga current value): Ini adalah elemen array yang sedang diproses saat itu (berjalan bergantian dari index pertama sampai terakhir).
 const examScore2 = [77, 78, 89, 90, 100, 99];
@@ -326,3 +326,53 @@ const total3 = examScore3.reduce((total3, jumlah) => {
   return total3 + jumlah;
 });
 console.log(total3);
+
+// contoh 2
+const animes2 = [
+  { id: 3, title: "Boruto", rating: 85, year: 2017 },
+  { id: 4, title: "Dragon Ball", rating: 87, year: 2004 },
+  { id: 2, title: "Hunter x Hunter", rating: 88, year: 2011 },
+  { id: 1, title: "Naruto", rating: 90, year: 2011 },
+];
+
+// currAnime = Mewakili data anime yang sedang diperiksa saat ini.(data yang sedang di proses) - parameter 1
+// bestAnime = Mewakili data anime dengan rating tertinggi yang ditemukan sejauh ini.(menyimpan hasil sementara) - parameter 2
+const bestAnime = animes2.reduce((currAnime, bestAnime) => {
+  if (currAnime.rating > bestAnime.rating) {
+    return currAnime;
+  }
+  return bestAnime;
+});
+
+console.log(bestAnime);
+
+// 9. Object this di dalam arrow function
+// kalau menggunakan reguler function
+const person = {
+  firstName: "Romo",
+  lastName: "Satya",
+  fullName: function () {
+    return `${this.firstName} ${this.lastName}`;
+  },
+};
+console.log(person.fullName());
+// kalau menggunakan arrow function
+// const person = {
+//   firstName: "Romo",
+//   lastName: "Satya",
+//   fullName: () => {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+// console.log(person.fullName()); //output akan undefined
+
+//10. Mengatur default value pada function
+// contoh 1
+function lemparDadu(sisi = 6) {
+  return Math.floor(Math.random() * sisi) + 1;
+}
+
+// contoh 2
+function sapa(name = "User", msg = "Selamat Bekerja....!") {
+  console.log(`${name} ${msg}`);
+}
