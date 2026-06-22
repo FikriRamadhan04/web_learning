@@ -376,3 +376,10 @@ function lemparDadu(sisi = 6) {
 function sapa(name = "User", msg = "Selamat Bekerja....!") {
   console.log(`${name} ${msg}`);
 }
+
+// 11. Mengubah array atau value object menjadi deret value argument function
+const angka5 = [1, 2, 3, 4, 5];
+// Math.max(angka5);
+// Math.min(angka5);
+console.log(...angka5);
+console.log(Math.max(...angka5));
