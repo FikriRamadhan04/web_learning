@@ -383,3 +383,13 @@ const angka5 = [1, 2, 3, 4, 5];
 // Math.min(angka5);
 console.log(...angka5);
 console.log(Math.max(...angka5));
+
+// 12. Menggabungkan nilai array dengan array lagi
+const angka6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const nama = ["Joseph", "Andrew", "Asep", "Budi", "Jesica", "Dwi"];
+
+const campuran1 = [...angka6, ...nama];
+console.log(campuran1);
+
+const campuran2 = [...nama, ...angka6];
+console.log(campuran2);
