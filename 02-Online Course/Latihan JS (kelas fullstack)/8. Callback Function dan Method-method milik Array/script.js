@@ -393,3 +393,57 @@ console.log(campuran1);
 
 const campuran2 = [...nama, ...angka6];
 console.log(campuran2);
+
+// 13. Menggabungkan property objek dengan objek lainnya
+// contoh 1
+const user = {
+  nama: "jhon",
+  email: "jhoncena@gmail.com",
+};
+
+const userBaru = { ...user, id: 123, password: "password" };
+console.log(user);
+console.log(userBaru);
+
+// contoh 2
+const credential = {
+  password: "298476328",
+  token: "83r5n3rt88",
+};
+
+const userBaru2 = { ...user, ...credential };
+console.log(userBaru2);
+
+// contoh 3
+const user2 = {
+  nama: "Fikri",
+  kelas: "05SISE002",
+};
+
+const credential2 = {
+  id: "017",
+  token: "nf39t349",
+};
+
+userBaru3 = { ...user2, ...credential2 };
+console.log(userBaru3);
+
+// 14.Menggunakan Rest Param (untuk parameter yang banyak atau tak terhingga)
+// contoh 1
+const sumAll = (...nums) => {
+  return nums.reduce((total, el) => total + el);
+};
+
+console.log(sumAll(1, 2, 3, 4, 5, 6, 7, 8, 10, 20)); // dia akan menambahkan dari awal hinggal akhir
+
+// contoh 2
+const nama2 = ["Joseph", "Andrew", "Asep", "Budi", "Jesica", "Dwi"];
+
+const pemenang = (gold, silver, bronze, ...sisa) => {
+  console.log(`Medali emas diraih: ${gold}`);
+  console.log(`Medali perak diraih: ${silver}`);
+  console.log(`Medali bronze diraih: ${bronze}`);
+  console.log(`Peserta lainnya: ${sisa}`);
+};
+
+console.log(pemenang(...nama2));
