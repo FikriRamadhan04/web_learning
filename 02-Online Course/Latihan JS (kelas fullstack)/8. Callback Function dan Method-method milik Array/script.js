@@ -428,7 +428,7 @@ const credential2 = {
 userBaru3 = { ...user2, ...credential2 };
 console.log(userBaru3);
 
-// 14.Menggunakan Rest Param (untuk parameter yang banyak atau tak terhingga)
+// 14.Menggunakan Rest Parameter (untuk parameter yang banyak atau tak terhingga)
 // contoh 1
 const sumAll = (...nums) => {
   return nums.reduce((total, el) => total + el);
@@ -437,13 +437,17 @@ const sumAll = (...nums) => {
 console.log(sumAll(1, 2, 3, 4, 5, 6, 7, 8, 10, 20)); // dia akan menambahkan dari awal hinggal akhir
 
 // contoh 2
-const nama2 = ["Joseph", "Andrew", "Asep", "Budi", "Jesica", "Dwi"];
+const nama2 = ["Joseph", "Andrew", "Asep", "Budi", "Jessica", "Dwi"];
 
-const pemenang = (gold, silver, bronze, ...sisa) => {
-  console.log(`Medali emas diraih: ${gold}`);
-  console.log(`Medali perak diraih: ${silver}`);
-  console.log(`Medali bronze diraih: ${bronze}`);
-  console.log(`Peserta lainnya: ${sisa}`);
-};
+// const pemenang = (gold, silver, bronze, ...sisa) => {
+//   console.log(`Medali emas diraih: ${gold}`);
+//   console.log(`Medali perak diraih: ${silver}`);
+//   console.log(`Medali bronze diraih: ${bronze}`);
+//   console.log(`Peserta lainnya: ${sisa}`);
+// };
 
-console.log(pemenang(...nama2));
+// console.log(pemenang(...nama2));
+
+// 15. Bongkar Element Array ke Masing-masing Variabel dengan Mudah
+const nama3 = ["Joseph", "Andrew", "Asep", "Budi", "Jessica", "Dwi"];
+const [gold, silver, bronze, ...peserta2] = nama2;
