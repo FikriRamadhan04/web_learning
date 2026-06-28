@@ -37,11 +37,11 @@ peserta.forEach(function (nomor) {
 });
 
 // contoh 2 (menampikan daftar barang)
-const keranjangBelanja = ["sepatu", "buku", "sepeda"];
+// const keranjangBelanja = ["sepatu", "buku", "sepeda"];
 
-keranjangBelanja.forEach((barang, index) => {
-  console.log(`${index + 1}. produk: ${barang}`);
-});
+// keranjangBelanja.forEach((barang, index) => {
+//   console.log(`${index + 1}. produk: ${barang}`);
+// });
 // 2. Map Method
 // map() digunakan untuk membuat array baru dengan mengubah setiap elemen dari array lama tanpa merusak data aslinya.
 // Kamu punya daftar nama, lalu kamu ingin mengubah semuanya jadi huruf kapital untuk disimpan di daftar baru.
@@ -448,6 +448,14 @@ const nama2 = ["Joseph", "Andrew", "Asep", "Budi", "Jessica", "Dwi"];
 
 // console.log(pemenang(...nama2));
 
-// 15. Bongkar Element Array ke Masing-masing Variabel dengan Mudah
+// 15. DESTRUCTING - Bongkar Element Array ke Masing-masing Variabel dengan Mudah
 const nama3 = ["Joseph", "Andrew", "Asep", "Budi", "Jessica", "Dwi"];
 const [gold, silver, bronze, ...peserta2] = nama2;
+
+// 16. Bogkar Properti Object Ke Masing-masing Variabel
+const user5 = {
+  name: "jhon",
+  email: "jhon@dose.com",
+};
+
+const { name: nama6, email, phone=29494579 } = user;
