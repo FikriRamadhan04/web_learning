@@ -452,10 +452,47 @@ const nama2 = ["Joseph", "Andrew", "Asep", "Budi", "Jessica", "Dwi"];
 const nama3 = ["Joseph", "Andrew", "Asep", "Budi", "Jessica", "Dwi"];
 const [gold, silver, bronze, ...peserta2] = nama2;
 
-// 16. Bogkar Properti Object Ke Masing-masing Variabel
+// 16. Bongkar Properti Object Ke Masing-masing Variabel
 const user5 = {
   name: "jhon",
   email: "jhon@dose.com",
 };
 
-const { name: nama6, email, phone=29494579 } = user;
+const { name: nama6, email, phone = 29494579 } = user;
+
+// 17. Bongkar Porperti Object dilakukan di dalam function - Object Destructuring
+const user6 = {
+  name: "jhon",
+  email: "jhon@dose.com",
+  role: "Admin",
+};
+// const {name: nama, email,phone= "09382628"}
+const userAndRole = ({ name, role }) => {
+  return `${name} ${role}`;
+};
+
+// Contoh 1: Aplikasi Kasir Toko Online (E-Commerce)
+// Data produk dari database (Sangat besar)
+const produkDetail = {
+  id: "PROD-9921",
+  nama: "Sepatu Roda Pro",
+  harga: 500000,
+  stok: 15,
+  warna: "Hitam",
+  ukuran: 42,
+};
+
+// PENERAPAN CARA BARU (Destructuring):
+// Saat belanja online, toko akan mengirimkan data barang yang dibeli dalam bentuk objek yang besar (ada ID, nama barang, harga, stok, warna, ukuran, dll).
+// Tapi, fungsi untuk membuat Struk Nota hanya butuh Nama Barang dan Harga saja.
+
+// Langsung bongkar dan ambil 'nama' dan 'harga' saja.
+// Juga sekalian pasang diskon default = 100000 (fitur nilai cadangan)
+const buatNota = ({ nama, harga, diskon = 100000 }) => {
+  const totalAkhir = harga - diskon;
+  return `Nota Pembelian: 1x ${nama} - Total: Rp ${totalAkhir}`;
+};
+
+// Jalankan fungsinya
+console.log(buatNota(produkDetail));
+// Output: Nota Pembelian: 1x Sepatu Roda Pro - Total: Rp 400000
