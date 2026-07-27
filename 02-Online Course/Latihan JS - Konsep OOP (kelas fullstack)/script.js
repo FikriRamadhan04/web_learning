@@ -103,11 +103,51 @@ function Mahasiswa(nama, jurusan, angkatan) {
   };
 }
 
-// 2. Membuat Object baru menggunakan keyword 'new'
+// - Membuat Object baru menggunakan keyword 'new'
 const mhs1 = new Mahasiswa("Budi", "Teknik Informatika", 2023);
 const mhs2 = new Mahasiswa("Siti", "Sistem Informasi", 2024);
 
-// 3. Mengakses property dan method object
+// - Mengakses property dan method object
 console.log(mhs1.nama); // Output: Budi
 console.log(mhs2.jurusan); // Output: Sistem Informasi
 console.log(mhs1.sapa()); // Output: Halo, nama saya Budi
+
+//3. Membuat Object Dengan Class
+// Secara singkat, Object dengan Class adalah konsep dalam pemrograman berorientasi objek
+// (Object-Oriented Programming atau OOP) di mana sebuah Class bertindak sebagai cetak biru
+// (blueprint atau templat), dan Object adalah wujud nyata atau hasil cetakan dari cetak biru tersebut.
+// Analogi sederhananya adalah:
+// Class adalah cetak biru atau desain rumah.
+// Object adalah rumah nyata yang dibangun berdasarkan desain tersebut.
+// Kita bisa membangun banyak rumah (object) dari satu cetak biru yang sama,
+// tetapi masing-masing rumah bisa memiliki warna cat atau isi yang berbeda.
+
+// Contoh : Mendefinisikan class Mobil
+class Mobil {
+  // Constructor untuk menginisialisasi properti object
+  constructor(merk, warna, tahunProduksi) {
+    this.merk = merk;
+    this.warna = warna;
+    this.tahunProduksi = tahunProduksi;
+  }
+
+  // Method (fungsi) di dalam class
+  infoMobil() {
+    console.log(`Merk: ${this.merk}`);
+    console.log(`Warna: ${this.warna}`);
+    console.log(`Tahun: ${this.tahunProduksi}`);
+  }
+}
+
+// Membuat object pertama (mobil1) menggunakan keyword 'new'
+const mobil1 = new Mobil("Toyota Avanza", "Hitam", 2022);
+
+// Membuat object kedua (mobil2)
+const mobil2 = new Mobil("Honda Civic", "Merah", 2023);
+
+// Menjalankan method dari masing-masing object
+console.log("--- Informasi Mobil 1 ---");
+mobil1.infoMobil();
+
+console.log("\n--- Informasi Mobil 2 ---");
+mobil2.infoMobil();
