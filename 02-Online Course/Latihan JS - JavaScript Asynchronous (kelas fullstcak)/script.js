@@ -1,4 +1,4 @@
-// contoh Asynchronous JavaScript - setTimeout
+//1. contoh 1 Asynchronous JavaScript - setTimeout
 console.log("Pertama: Mulai proses");
 
 setTimeout(() => {
@@ -11,7 +11,7 @@ console.log("Kedua: Proses lain berjalan duluan");
 // Kedua: Proses lain berjalan duluan
 // Ketiga: Proses asynchronous selesai (setelah 2 detik)
 
-// Function yang mensimulasikan proses asynchronous (misal: mengambil data dari server)
+// contoh Function yang mensimulasikan proses asynchronous (misal: mengambil data dari server)
 function ambilDataDariServer() {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -20,7 +20,7 @@ function ambilDataDariServer() {
   });
 }
 
-// Function async untuk menjalankan proses secara asynchronous
+// contoh 3 Function async untuk menjalankan proses secara asynchronous
 async function prosesUtama() {
   console.log("1. Mulai mengambil data...");
 
@@ -31,5 +31,22 @@ async function prosesUtama() {
   console.log("3. Proses selesai!");
 }
 
-// Jalankan fungsi
 prosesUtama();
+
+// contoh 2 - contoh callback hell
+setTimeout(function (){
+    document.body.style.backgroundColor = "red";
+    setTimeout(function (){
+    document.body.style.backgroundColor = "yellow";
+    setTimeout(function (){
+    document.body.style.backgroundColor = "green";
+    setTimeout(function (){
+    document.body.style.backgroundColor = "blue";
+},3000);
+},3000);
+},2000);
+},1000);
+
+
+
+
