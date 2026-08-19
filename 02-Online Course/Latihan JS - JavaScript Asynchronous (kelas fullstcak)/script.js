@@ -93,5 +93,28 @@ requestPromise('movie.com')
 	console.log('erros', error);
 });
 
+// 2. Cara Benar Menggunakan Fungsi Promise
+requestPromise('movie.com').then((result) => {
+	console.log(result + "page - 1");
+	console.log(result );
+	return requestPromise('movie.com');
+	
+})
+.then((result) => {
+	console.log(result + "page - 2");
+	return requestPromise('movie.com');
+})
+.then((result) => {
+	console.log(result + "page - 3");
+	return requestPromise('movie.com');
+})
+.then((result) => {
+	console.log(result + "page - 4");
+})
+
+.catch((err) => {
+	console.log(err);
+});
+
 
 
