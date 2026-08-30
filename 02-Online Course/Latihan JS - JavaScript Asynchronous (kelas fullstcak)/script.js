@@ -84,7 +84,7 @@ function(error){
 }
 );
 
-// 2. Latihan Request Menggunakan Promise
+// 3. Latihan Request Menggunakan Promise
 requestPromise('movie.com')
 .then((response) => {
 	console.log('success', response);
@@ -93,7 +93,7 @@ requestPromise('movie.com')
 	console.log('erros', error);
 });
 
-// 2. Cara Benar Menggunakan Fungsi Promise
+// 4. Cara Benar Menggunakan Fungsi Promise
 requestPromise('movie.com').then((result) => {
 	console.log(result + "page - 1");
 	console.log(result );
@@ -116,5 +116,27 @@ requestPromise('movie.com').then((result) => {
 	console.log(err);
 });
 
+// 5. Cara Membuat Promise
+const contohPromise = () => {
+return new Promise((resolve, reject) => {
+	// resolve(() => {
+	// 	console.log("berhasil");
+	// });
+	reject(() => {console.log("berhasil");});
+});
+
+};
+
+// 6. Fungsi Async Keyword
+const hello = async () => {
+	// throw "Maaf gak kenal"
+	return "hello world";
+};
+
+hello().then((res) => {
+	console.log('response', res);
+	}).catch((err) => {
+		console.log('error',err);
+});
 
 
